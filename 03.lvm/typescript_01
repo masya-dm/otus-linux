@@ -1,0 +1,617 @@
+Script started on Mon 12 Aug 2019 04:09:45 PM MSK
+]0;root@lvm:~[?1034h[root@lvm ~]# mkdir /tmp/vol_00
+]0;root@lvm:~[root@lvm ~]# mount /dev/VolGroup00/LogVol0-[K0 /tm,p[K[Kp/vol_00/
+]0;root@lvm:~[root@lvm ~]# cp /tmp/[Kv[K/v
+vagrant-shell  vol_00/        
+[root@lvm ~]# cp /tmp/vol_00/root/typescript_00 /rp[Koot/
+]0;root@lvm:~[root@lvm ~]# umop[K[Kount /dev/VolGroup00/LogVol00
+]0;root@lvm:~[root@lvm ~]# lsblk 
+NAME                    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda                       8:0    0   40G  0 disk 
+├─sda1                    8:1    0    1M  0 part 
+├─sda2                    8:2    0    1G  0 part /boot
+└─sda3                    8:3    0   39G  0 part 
+  ├─VolGroup00-LogVol01 253:1    0  1.5G  0 lvm  [SWAP]
+  └─VolGroup00-LogVol00 253:2    0 37.5G  0 lvm  
+sdb                       8:16   0   10G  0 disk 
+└─vg_root-lv_root       253:0    0   10G  0 lvm  /
+sdc                       8:32   0    2G  0 disk 
+sdd                       8:48   0    1G  0 disk 
+sde                       8:64   0    1G  0 disk 
+]0;root@lvm:~[root@lvm ~]# lvremove /dev/VolGroup00/LogVol00
+Do you really want to remove active logical volume VolGroup00/LogVol00? [y/n]: u y
+  Logical volume "LogVol00" successfully removed
+]0;root@lvm:~[root@lvm ~]# lvcreate -n LogVol00 -L 8G /dev/VolGroup00
+WARNING: xfs signature detected on /dev/VolGroup00/LogVol00 at offset 0. Wipe it? [y/n]: y
+  Wiping xfs signature on /dev/VolGroup00/LogVol00.
+  Logical volume "LogVol00" created.
+]0;root@lvm:~[root@lvm ~]# mkfs.xfs /[K/dev/VolGroup00/LogVol00.[K
+meta-data=/dev/VolGroup00/LogVol00 isize=512    agcount=4, agsize=524288 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=0, sparse=0
+data     =                       bsize=4096   blocks=2097152, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+]0;root@lvm:~[root@lvm ~]# mount //dev/VolGroup00/LogVol00[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pdev/VolGroup00/LogVol00[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /mnt/
+]0;root@lvm:~[root@lvm ~]# xfd[Ksdump -J - /dev/vg_root/lv_root | xfsrestore -J - /mnt/
+xfsrestore: using file dump (drive_simple) strategy
+xfsrestore: version 3.1.7 (dump format 3.0)
+xfsdump: using file dump (drive_simple) strategy
+xfsdump: version 3.1.7 (dump format 3.0)
+xfsdump: level 0 dump of lvm:/
+xfsdump: dump date: Mon Aug 12 16:13:04 2019
+xfsdump: session id: 7fc792d8-a456-4f91-b953-23b838b1a967
+xfsdump: session label: ""
+xfsrestore: searching media for dump
+xfsdump: ino map phase 1: constructing initial dump list
+xfsdump: ino map phase 2: skipping (no pruning necessary)
+xfsdump: ino map phase 3: skipping (only one dump stream)
+xfsdump: ino map construction complete
+xfsdump: estimated dump size: 818518976 bytes
+xfsdump: creating dump session media file 0 (media 0, file 0)
+xfsdump: dumping ino map
+xfsdump: dumping directories
+xfsrestore: examining media file 0
+xfsrestore: dump description: 
+xfsrestore: hostname: lvm
+xfsrestore: mount point: /
+xfsrestore: volume: /dev/mapper/vg_root-lv_root
+xfsrestore: session time: Mon Aug 12 16:13:04 2019
+xfsrestore: level: 0
+xfsrestore: session label: ""
+xfsrestore: media label: ""
+xfsrestore: file system id: f44bcf3d-2b05-45a5-8cb0-c195820a0fe1
+xfsrestore: session id: 7fc792d8-a456-4f91-b953-23b838b1a967
+xfsrestore: media id: 7dcc61f3-1a71-48c6-a3df-54ff2a1f8141
+xfsrestore: searching media for directory dump
+xfsrestore: reading directories
+xfsdump: dumping non-directory files
+xfsrestore: 3124 directories and 26982 entries processed
+xfsrestore: directory post-processing
+xfsrestore: restoring non-directory files
+xfsdump: ending media file
+xfsdump: media file size 790199024 bytes
+xfsdump: dump size (non-dir files) : 775009008 bytes
+xfsdump: dump complete: 38 seconds elapsed
+xfsdump: Dump Status: SUCCESS
+xfsrestore: restore complete: 38 seconds elapsed
+xfsrestore: Restore Status: SUCCESS
+]0;root@lvm:~[root@lvm ~]# lsblk 
+NAME                    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda                       8:0    0   40G  0 disk 
+├─sda1                    8:1    0    1M  0 part 
+├─sda2                    8:2    0    1G  0 part /boot
+└─sda3                    8:3    0   39G  0 part 
+  ├─VolGroup00-LogVol01 253:1    0  1.5G  0 lvm  [SWAP]
+  └─VolGroup00-LogVol00 253:2    0    8G  0 lvm  /mnt
+sdb                       8:16   0   10G  0 disk 
+└─vg_root-lv_root       253:0    0   10G  0 lvm  /
+sdc                       8:32   0    2G  0 disk 
+sdd                       8:48   0    1G  0 disk 
+sde                       8:64   0    1G  0 disk 
+]0;root@lvm:~[root@lvm ~]# for i in /proc/ /dev/ /boot/ /run/ /sys/ [K; do mount --bind $i /mnt/$i [K; done 
+]0;root@lvm:~[root@lvm ~]# chroot /mnt/
+]0;root@lvm:/[?1034h[root@lvm /]# grub2-mkconfig -o /boot/grub2/grub.x[Kcfg 
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-3.10.0-862.2.3.el7.x86_64
+Found initrd image: /boot/initramfs-3.10.0-862.2.3.el7.x86_64.img
+done
+]0;root@lvm:/[root@lvm /]# cd /boot/
+]0;root@lvm:/boot[root@lvm boot]#  for i in `ls initramfs-*img`; do dracut -v $i `echo $i|sed "s/initramfs-//g;
+> s/.img//g"` --force; done
+Executing: /sbin/dracut -v initramfs-3.10.0-862.2.3.el7.x86_64.img 3.10.0-862.2.3.el7.x86_64 --force
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+*** Including module: bash ***
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 60-persistent-storage-dm.rules
+Skipping udev rule: 55-dm.rules
+*** Including module: kernel-modules ***
+Omitting driver floppy
+*** Including module: lvm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 56-lvm.rules
+Skipping udev rule: 60-persistent-storage-lvm.rules
+*** Including module: qemu ***
+*** Including module: resume ***
+*** Including module: rootfs-block ***
+*** Including module: terminfo ***
+*** Including module: udev-rules ***
+Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Skipping udev rule: 91-permissions.rules
+*** Including module: biosdevname ***
+*** Including module: systemd ***
+*** Including module: usrmount ***
+*** Including module: base ***
+*** Including module: fs-lib ***
+*** Including module: shutdown ***
+*** Including modules done ***
+*** Installing kernel module dependencies and firmware ***
+*** Installing kernel module dependencies and firmware done ***
+*** Resolving executable dependencies ***
+*** Resolving executable dependencies done***
+*** Hardlinking files ***
+*** Hardlinking files done ***
+*** Stripping files ***
+*** Stripping files done ***
+*** Generating early-microcode cpio image contents ***
+*** No early-microcode cpio image needed ***
+*** Store current command line parameters ***
+*** Creating image file ***
+*** Creating image file done ***
+*** Creating initramfs image file '/boot/initramfs-3.10.0-862.2.3.el7.x86_64.img' done ***
+]0;root@lvm:/boot[root@lvm boot]# pvcreate /dev/sdc /dev/sdsd[K[Kd 
+  Physical volume "/dev/sdc" successfully created.
+  Physical volume "/dev/sdd" successfully created.
+]0;root@lvm:/boot[root@lvm boot]# vgcreate vg_var /dev/sdc /dev/sdd
+  Volume group "vg_var" successfully created
+]0;root@lvm:/boot[root@lvm boot]# lvcreate -L 950M -m1 -n lv_var vg_var
+  Rounding up size to full physical extent 952.00 MiB
+  Logical volume "lv_var" created.
+]0;root@lvm:/boot[root@lvm boot]# mkfs.ext4 /dev/vg_var/lv_var 
+mke2fs 1.42.9 (28-Dec-2013)
+Filesystem label=
+OS type: Linux
+Block size=4096 (log=2)
+Fragment size=4096 (log=2)
+Stride=0 blocks, Stripe width=0 blocks
+60928 inodes, 243712 blocks
+12185 blocks (5.00%) reserved for the super user
+First data block=0
+Maximum filesystem blocks=249561088
+8 block groups
+32768 blocks per group, 32768 fragments per group
+7616 inodes per group
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: 0/8   done
+
+]0;root@lvm:/boot[root@lvm boot]# lvs
+  LV       VG         Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  LogVol00 VolGroup00 -wi-ao----   8.00g                                                    
+  LogVol01 VolGroup00 -wi-ao----   1.50g                                                    
+  lv_root  vg_root    -wi-ao---- <10.00g                                                    
+  lv_var   vg_var     rwi-a-r--- 952.00m                                    100.00          
+]0;root@lvm:/boot[root@lvm boot]# mount /dev/vg_var/lv_var /mnt/
+]0;root@lvm:/boot[root@lvm boot]# cp -aR /vAR[K[Kar/* /mnt/
+]0;root@lvm:/boot[root@lvm boot]# mkdir /tmp/oldvar /&& [1P[C[C[Cmc /var/* /tmp/oldvar
+[?1049h[1;66r[4l[66;1H(B[m[37m[40m(B[m[39;49m[K[?1049l[?1001s[?1002h[?1015h7[?47hCannot open master side of pty: No such file or directory (2)
+]0;mc [root@lvm]:/var/adm>]0;mc [root@lvm]:/var/adm>[?1049h[1;66r[4l[?1h=(B[m[39m[49m[1;66r[H[2J[2;1H[37m[44m┌<─[30m[47m /var/adm [37m[44m───────────────────────────────────────────────────────────────────────────────────────────────────.[^]>┐
+│[116C│
+│[30m[46m/..                                                                                            │UP--DIR│Aug 12 15:59[37m[44m│
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+├[116C┤
+│[116C│
+└──────────────────────────────────────────────────────────────────────────────────────────────── 7364M/8182M (90%) ─┘
+[39m[49mHint: We also have a nice manual page.
+
+[1m[37m[40m 1(B[m[30m[46mHelp                 [1m[37m[40m 2(B[m[30m[46mMenu                 [1m[37m[40m 3(B[m[30m[46mView                  [1m[37m[40m 4(B[m[30m[46mEdit                  [1m[37m[40m 5(B[m[30m[46mCopy                  [1m[37m[40m 6(B[m[30m[46mRenMov               [1m[37m[40m 7(B[m[30m[46mMkdir                 [1m[37m[40m 8(B[m[30m[46mDelete                [1m[37m[40m 9(B[m[30m[46mPullDn                [1m[37m[40m10(B[m[30m[46mQuit[K[64;237H]0;mc [root@lvm]:/var/adm>]0;mc [root@lvm]:/var/adm>[1;1H  Left     File     Command     Options     Right[K[2;119H[37m[44m┌<─ /var/cache ──────────────────────────────────────────────────────────────────────────────────────────────────.[^]>┐[3;2H[1m[33m[44m'n                                            Name                                             (B[m[37m[44m│[1m[33m[44m Size  (B[m[37m[44m│[1m[33m[44mModify time (B[m[37m[44m││[1m[33m[44m'n                                            Name                                              (B[m[37m[44m│[1m[33m[44m Size  (B[m[37m[44m│[1m[33m[44mModify time (B[m[37m[44m│[4;119H│[1m[37m[44m/..                                                                                             (B[m[37m[44m│[1m[37m[44mUP--DIR(B[m[37m[44m│[1m[37m[44mAug 12 15:59(B[m[37m[44m│[5;119H│[1m[37m[44m/ldconfig                                                                                       (B[m[37m[44m│[1m[37m[44m     23(B[m[37m[44m│[1m[37m[44mAug 12 15:59(B[m[37m[44m│[6;119H│[1m[37m[44m/man                                                                                            (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mJun 10  2014(B[m[37m[44m│[7;119H│[1m[37m[44m/yum                                                                                            (B[m[37m[44m│[1m[37m[44m     20(B[m[37m[44m│[1m[37m[44mAug 12 15:59(B[m[37m[44m│[8;119H│                                                                                                │       │            │[9;119H│                                                                                                │       │            │[10;119H│                                                                                                │       │            │[11;119H│                                                                                                │       │            │[12;119H│                                                                                                │       │            │[13;119H│                                                                                                │       │            │[14;119H│                                                                                                │       │            │[15;119H│                                                                                                │       │            │[16;119H│                                                                                                │       │            │[17;119H│                                                                                                │       │            │[18;119H│                                                                                                │       │            │[19;119H│                                                                                                │       │            │[20;119H│                                                                                                │       │            │[21;119H│                                                                                                │       │            │[22;119H│                                                                                                │       │            │[23;119H│                                                                                                │       │            │[24;119H│                                                                                                │       │            │[25;119H│                                                                                                │       │            │[26;119H│                                                                                                │       │            │[27;119H│                                                                                                │       │            │[28;119H│                                                                                                │       │            │[29;119H│                                                                                                │       │            │[30;119H│                                                                                                │       │            │[31;119H│                                                                                                │       │            │[32;119H│                                                                                                │       │            │[33;119H│                                                                                                │       │            │[34;119H│                                                                                                │       │            │[35;119H│                                                                                                │       │            │[36;119H│                                                                                                │       │            │[37;119H│                                                                                                │       │            │[38;119H│                                                                                                │       │            │[39;119H│                                                                                                │       │            │[40;119H│                                                                                                │       │            │[41;119H│                                                                                                │       │            │[42;119H│                                                                                                │       │            │[43;119H│                                                                                                │       │            │[44;119H│                                                                                                │       │            │[45;119H│                                                                                                │       │            │[46;119H│                                                                                                │       │            │[47;119H│                                                                                                │       │            │[48;119H│                                                                                                │       │            │[49;119H│                                                                                                │       │            │[50;119H│                                                                                                │       │            │[51;119H│                                                                                                │       │            │[52;119H│                                                                                                │       │            │[53;119H│                                                                                                │       │            │[54;119H│                                                                                                │       │            │[55;119H│                                                                                                │       │            │[56;119H│                                                                                                │       │            │[57;119H│                                                                                                │       │            │[58;119H│                                                                                                │       │            │[59;119H│                                                                                                │       │            │[60;119H│                                                                                                │       │            │[61;2H────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤[62;2HUP--DIR                                                                                                             ││UP--DIR                                                                                                              │[63;119H└───────────────────────────────────────────────────────────────────────────────────────────────── 7364M/8182M (90%) ─┘[65;1H[39m[49m#[65;3H[21;91H[30m[47m                                                        [22;91H ┌──────────────[34m The Midnight Commander [30m──────────────┐ [23;91H │ Do you really want to quit the Midnight Commander? │ [24;91H ├────────────────────────────────────────────────────┤ [25;91H │                  [46m[ [34mY[30mes ][47m  [ [34mN[30mo ]                   │ [26;91H └────────────────────────────────────────────────────┘ [27;91H                                                        [25;113H[64;7H[39m[49mM-! will allow you to execute programs and see the output in the viewer.[64;237H[1;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[1;237H[?1015l[?1002l[?1001r[?1l>[66;1H(B[m[39;49m[K[?1049l[?47l8[m[39;49m
+]0;root@lvm:/var/adm[root@lvm adm]# mkdir /tmp/oldvar && mc /var/* /tmp/oldvar[1P[1@v
+mkdir: cannot create directory ‘/tmp/oldvar’: File exists
+]0;root@lvm:/var/adm[root@lvm adm]# mkdir /tmp/oldvar && mv /var/* /tmp/oldvar[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Klc [K[Ks [K[K[Kmc /.[Ktmp/
+[?1049h[1;66r[4l[66;1H(B[m[37m[40m(B[m[39;49m[K[?1049l[?1001s[?1002h[?1015h7[?47hCannot open master side of pty: No such file or directory (2)
+]0;mc [root@lvm]:/tmp>]0;mc [root@lvm]:/tmp>[?1049h[1;66r[4l[?1h=(B[m[39m[49m[1;66r[H[2J[2;1H[37m[44m┌<─[30m[47m /tmp [37m[44m───────────────────────────────────────────────────────────────────────────────────────────────────────.[^]>┐
+│[116C│
+│[30m[46m/..                                                                                            │UP--DIR│Aug 12 16:13[37m[44m│
+│[1m[37m[44m/.ICE-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│
+│[1m[37m[44m/.Test-unix                                                                                    (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│
+│[1m[37m[44m/.X11-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│
+│[1m[37m[44m/.XIM-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│
+│[1m[37m[44m/.font-unix                                                                                    (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│
+│[1m[37m[44m/mc-root                                                                                       (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:20(B[m[37m[44m│
+│[1m[37m[44m/oldvar                                                                                        (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:20(B[m[37m[44m│
+│[1m[37m[44m/systemd-private-7489039c3b884fbcadac67b717e1ec7d-chronyd.service-ddlJh8                       (B[m[37m[44m│[1m[37m[44m     17(B[m[37m[44m│[1m[37m[44mAug 12 16:08(B[m[37m[44m│
+│[1m[37m[44m/systemd-private-d2e2323d9a7d4abd82f8e709e9ae0667-chronyd.service-rJhRXi                       (B[m[37m[44m│[1m[37m[44m     17(B[m[37m[44m│[1m[37m[44mAug 12 15:59(B[m[37m[44m│
+│[1m[37m[44m/vol_00                                                                                        (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:09(B[m[37m[44m│
+│[1m[32m[44m*ks-script-Vef3rE                                                                              (B[m[37m[44m│[1m[32m[44m   3361(B[m[37m[44m│[1m[32m[44mMay 12  2018(B[m[37m[44m│
+│[1m[32m[44m*ks-script-f5cTjE                                                                              (B[m[37m[44m│[1m[32m[44m    836(B[m[37m[44m│[1m[32m[44mMay 12  2018(B[m[37m[44m│
+│[1m[32m[44m*vagrant-shell                                                                                 (B[m[37m[44m│[1m[32m[44m    154(B[m[37m[44m│[1m[32m[44mAug 12 15:59(B[m[37m[44m│
+│ yum.log                                                                                       │      0│May 12  2018│
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+├[116C┤
+│[116C│
+└──────────────────────────────────────────────────────────────────────────────────────────────── 7364M/8182M (90%) ─┘
+[39m[49mHint: To change directory halfway through typing a command, use M-c (quick cd).
+
+[1m[37m[40m 1(B[m[30m[46mHelp                 [1m[37m[40m 2(B[m[30m[46mMenu                 [1m[37m[40m 3(B[m[30m[46mView                  [1m[37m[40m 4(B[m[30m[46mEdit                  [1m[37m[40m 5(B[m[30m[46mCopy                  [1m[37m[40m 6(B[m[30m[46mRenMov               [1m[37m[40m 7(B[m[30m[46mMkdir                 [1m[37m[40m 8(B[m[30m[46mDelete                [1m[37m[40m 9(B[m[30m[46mPullDn                [1m[37m[40m10(B[m[30m[46mQuit[K[64;237H]0;mc [root@lvm]:/tmp>]0;mc [root@lvm]:/tmp>[1;1H  Left     File     Command     Options     Right[K[2;119H[37m[44m┌<─ /var/adm ────────────────────────────────────────────────────────────────────────────────────────────────────.[^]>┐[3;2H[1m[33m[44m'n                                            Name                                             (B[m[37m[44m│[1m[33m[44m Size  (B[m[37m[44m│[1m[33m[44mModify time (B[m[37m[44m││[1m[33m[44m'n                                            Name                                              (B[m[37m[44m│[1m[33m[44m Size  (B[m[37m[44m│[1m[33m[44mModify time (B[m[37m[44m│[4;119H│[1m[37m[44m/..                                                                                             (B[m[37m[44m│[1m[37m[44mUP--DIR(B[m[37m[44m│[1m[37m[44mAug 12 15:59(B[m[37m[44m│[5;119H│                                                                                                │       │            │[6;119H│                                                                                                │       │            │[7;119H│                                                                                                │       │            │[8;119H│                                                                                                │       │            │[9;119H│                                                                                                │       │            │[10;119H│                                                                                                │       │            │[11;119H│                                                                                                │       │            │[12;119H│                                                                                                │       │            │[13;119H│                                                                                                │       │            │[14;119H│                                                                                                │       │            │[15;119H│                                                                                                │       │            │[16;119H│                                                                                                │       │            │[17;119H│                                                                                                │       │            │[18;119H│                                                                                                │       │            │[19;119H│                                                                                                │       │            │[20;119H│                                                                                                │       │            │[21;119H│                                                                                                │       │            │[22;119H│                                                                                                │       │            │[23;119H│                                                                                                │       │            │[24;119H│                                                                                                │       │            │[25;119H│                                                                                                │       │            │[26;119H│                                                                                                │       │            │[27;119H│                                                                                                │       │            │[28;119H│                                                                                                │       │            │[29;119H│                                                                                                │       │            │[30;119H│                                                                                                │       │            │[31;119H│                                                                                                │       │            │[32;119H│                                                                                                │       │            │[33;119H│                                                                                                │       │            │[34;119H│                                                                                                │       │            │[35;119H│                                                                                                │       │            │[36;119H│                                                                                                │       │            │[37;119H│                                                                                                │       │            │[38;119H│                                                                                                │       │            │[39;119H│                                                                                                │       │            │[40;119H│                                                                                                │       │            │[41;119H│                                                                                                │       │            │[42;119H│                                                                                                │       │            │[43;119H│                                                                                                │       │            │[44;119H│                                                                                                │       │            │[45;119H│                                                                                                │       │            │[46;119H│                                                                                                │       │            │[47;119H│                                                                                                │       │            │[48;119H│                                                                                                │       │            │[49;119H│                                                                                                │       │            │[50;119H│                                                                                                │       │            │[51;119H│                                                                                                │       │            │[52;119H│                                                                                                │       │            │[53;119H│                                                                                                │       │            │[54;119H│                                                                                                │       │            │[55;119H│                                                                                                │       │            │[56;119H│                                                                                                │       │            │[57;119H│                                                                                                │       │            │[58;119H│                                                                                                │       │            │[59;119H│                                                                                                │       │            │[60;119H│                                                                                                │       │            │[61;2H────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤[62;2HUP--DIR                                                                                                             ││UP--DIR                                                                                                              │[63;119H└───────────────────────────────────────────────────────────────────────────────────────────────── 7364M/8182M (90%) ─┘[65;1H[39m[49m#[233C[37m[44m[^][65;3H[4;2H[1m[37m[44m/..                                                                                            (B[m[37m[44m│[1m[37m[44mUP--DIR(B[m[37m[44m│[1m[37m[44mAug 12 16:13[5;2H(B[m[30m[46m/.ICE-unix                                                                                     │      6│May 12  2018[62;2H[37m[44m/.ICE-unix[65;3H[5;2H[1m[37m[44m/.ICE-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[6;2H(B[m[30m[46m/.Test-unix                                                                                    │      6│May 12  2018[62;4H[37m[44mTest-unix[65;3H[6;2H[1m[37m[44m/.Test-unix                                                                                    (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[7;2H(B[m[30m[46m/.X11-unix                                                                                     │      6│May 12  2018[62;4H[37m[44mX11-unix [65;3H[7;2H[1m[37m[44m/.X11-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[8;2H(B[m[30m[46m/.XIM-unix                                                                                     │      6│May 12  2018[62;5H[37m[44mIM[65;3H[8;2H[1m[37m[44m/.XIM-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[9;2H(B[m[30m[46m/.font-unix                                                                                    │      6│May 12  2018[62;4H[37m[44mfont-unix[65;3H[9;2H[1m[37m[44m/.font-unix                                                                                    (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[10;2H(B[m[30m[46m/mc-root                                                                                       │      6│Aug 12 16:20[62;3H[37m[44mmc-root   [65;3H[10;2H[1m[37m[44m/mc-root                                                                                       (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:20[11;2H(B[m[30m[46m/oldvar                                                                                        │      6│Aug 12 16:20[62;3H[37m[44moldvar [65;3H[10;2H[30m[46m/mc-root                                                                                       │      6│Aug 12 16:20[11;2H[1m[37m[44m/oldvar                                                                                        (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:20[62;3H(B[m[37m[44mmc-root[65;3H[10;2H[1m[37m[44m/mc-root                                                                                       (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:20[11;2H(B[m[30m[46m/oldvar                                                                                        │      6│Aug 12 16:20[62;3H[37m[44moldvar [65;3H]0;mc [root@lvm]:/tmp/oldvar>[64;7H[39m[49mWant to see your *~ backup files? Set it in the Configuration dialog.[K[64;237H[2;9H[30m[47m/oldvar [4;2H[46m/..                                                                                            │UP--DIR│Aug 12 16:20[5;2H[37m[44m                                                                                               │       │            [6;2H                                                                                               │       │            [7;2H                                                                                               │       │            [8;2H                                                                                               │       │            [9;2H                                                                                               │       │            [10;2H                                                                                               │       │            [11;2H                                                                                               │       │            [12;2H                                                                                               │       │            [13;2H                                                                                               │       │            [14;2H                                                                                               │       │            [15;2H                                                                                               │       │            [16;2H                                                                                               │       │            [17;2H                                                                                               │       │            [18;3H       [94C │            [62;2HUP--DIR[65;3H]0;mc [root@lvm]:/tmp/oldvar>]0;mc [root@lvm]:/tmp>[64;7H[39m[49mYou can disable all requests for confirmation in Options/Confirmation.[64;237H[2;9H[30m[47m [37m[44m───────[4;2H[1m[37m[44m/..                                                                                            (B[m[37m[44m│[1m[37m[44mUP--DIR(B[m[37m[44m│[1m[37m[44mAug 12 16:13[5;2H/.ICE-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[6;2H/.Test-unix                                                                                    (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[7;2H/.X11-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[8;2H/.XIM-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[9;2H/.font-unix                                                                                    (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[10;2H/mc-root                                                                                       (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:20[11;2H(B[m[30m[46m/oldvar                                                                                        │      6│Aug 12 16:20[12;2H[1m[37m[44m/systemd-private-7489039c3b884fbcadac67b717e1ec7d-chronyd.service-ddlJh8                       (B[m[37m[44m│[1m[37m[44m     17(B[m[37m[44m│[1m[37m[44mAug 12 16:08[13;2H/systemd-private-d2e2323d9a7d4abd82f8e709e9ae0667-chronyd.service-rJhRXi                       (B[m[37m[44m│[1m[37m[44m     17(B[m[37m[44m│[1m[37m[44mAug 12 15:59[14;2H/vol_00                                                                                        (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:09[15;2H[32m*ks-script-Vef3rE                                                                              (B[m[37m[44m│[1m[32m[44m   3361(B[m[37m[44m│[1m[32m[44mMay 12  2018[16;2H*ks-script-f5cTjE                                                                              (B[m[37m[44m│[1m[32m[44m    836(B[m[37m[44m│[1m[32m[44mMay 12  2018[17;2H*vagrant-shell                                                                                 (B[m[37m[44m│[1m[32m[44m    154(B[m[37m[44m│[1m[32m[44mAug 12 15:59[18;3H(B[m[37m[44myum.log[94C0│May 12  2018[62;2H/oldvar[65;3H]0;mc [root@lvm]:/tmp>[21;91H[30m[47m                                                        [22;91H ┌──────────────[34m The Midnight Commander [30m──────────────┐ [23;91H │ Do you really want to quit the Midnight Commander? │ [24;91H ├────────────────────────────────────────────────────┤ [25;91H │                  [46m[ [34mY[30mes ][47m  [ [34mN[30mo ]                   │ [26;91H └────────────────────────────────────────────────────┘ [27;91H                                                        [25;113H[1;1H[39m[49m[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[1;237H[?1015l[?1002l[?1001r[?1l>[66;1H(B[m[39;49m[K[?1049l[?47l8[m[39;49m
+]0;root@lvm:/tmp[root@lvm tmp]# rmdir tmp[K[K[K/tmp/oldvar/
+]0;root@lvm:/tmp[root@lvm tmp]# rmdir /tmp/oldvar/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pmc /tmp/kdir /tmp/oldvar && mv /var/* /tmp/oldvar
+]0;root@lvm:/tmp[root@lvm tmp]# mkdir /tmp/oldvar && mv /var/* /tmp/oldvar[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Prmdir /tmp/oldvar/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pmc /tmp/
+[?1049h[1;66r[4l[66;1H(B[m[37m[40m(B[m[39;49m[K[?1049l[?1001s[?1002h[?1015h7[?47hCannot open master side of pty: No such file or directory (2)
+]0;mc [root@lvm]:/tmp>]0;mc [root@lvm]:/tmp>[?1049h[1;66r[4l[?1h=(B[m[39m[49m[1;66r[H[2J[2;1H[37m[44m┌<─[30m[47m /tmp [37m[44m───────────────────────────────────────────────────────────────────────────────────────────────────────.[^]>┐
+│[116C│
+│[30m[46m/..                                                                                            │UP--DIR│Aug 12 16:13[37m[44m│
+│[1m[37m[44m/.ICE-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│
+│[1m[37m[44m/.Test-unix                                                                                    (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│
+│[1m[37m[44m/.X11-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│
+│[1m[37m[44m/.XIM-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│
+│[1m[37m[44m/.font-unix                                                                                    (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│
+│[1m[37m[44m/mc-root                                                                                       (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:20(B[m[37m[44m│
+│[1m[37m[44m/oldvar                                                                                        (B[m[37m[44m│[1m[37m[44m    238(B[m[37m[44m│[1m[37m[44mAug 12 16:20(B[m[37m[44m│
+│[1m[37m[44m/systemd-private-7489039c3b884fbcadac67b717e1ec7d-chronyd.service-ddlJh8                       (B[m[37m[44m│[1m[37m[44m     17(B[m[37m[44m│[1m[37m[44mAug 12 16:08(B[m[37m[44m│
+│[1m[37m[44m/systemd-private-d2e2323d9a7d4abd82f8e709e9ae0667-chronyd.service-rJhRXi                       (B[m[37m[44m│[1m[37m[44m     17(B[m[37m[44m│[1m[37m[44mAug 12 15:59(B[m[37m[44m│
+│[1m[37m[44m/vol_00                                                                                        (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:09(B[m[37m[44m│
+│[1m[32m[44m*ks-script-Vef3rE                                                                              (B[m[37m[44m│[1m[32m[44m   3361(B[m[37m[44m│[1m[32m[44mMay 12  2018(B[m[37m[44m│
+│[1m[32m[44m*ks-script-f5cTjE                                                                              (B[m[37m[44m│[1m[32m[44m    836(B[m[37m[44m│[1m[32m[44mMay 12  2018(B[m[37m[44m│
+│[1m[32m[44m*vagrant-shell                                                                                 (B[m[37m[44m│[1m[32m[44m    154(B[m[37m[44m│[1m[32m[44mAug 12 15:59(B[m[37m[44m│
+│ yum.log                                                                                       │      0│May 12  2018│
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+│                                                                                               │       │            │
+├[116C┤
+│[116C│
+└──────────────────────────────────────────────────────────────────────────────────────────────── 7364M/8182M (90%) ─┘
+[39m[49mHint: Key frequently visited ftp sites in the hotlist: type C-\.
+
+[1m[37m[40m 1(B[m[30m[46mHelp                 [1m[37m[40m 2(B[m[30m[46mMenu                 [1m[37m[40m 3(B[m[30m[46mView                  [1m[37m[40m 4(B[m[30m[46mEdit                  [1m[37m[40m 5(B[m[30m[46mCopy                  [1m[37m[40m 6(B[m[30m[46mRenMov               [1m[37m[40m 7(B[m[30m[46mMkdir                 [1m[37m[40m 8(B[m[30m[46mDelete                [1m[37m[40m 9(B[m[30m[46mPullDn                [1m[37m[40m10(B[m[30m[46mQuit[K[64;237H]0;mc [root@lvm]:/tmp>]0;mc [root@lvm]:/tmp>[1;1H  Left     File     Command     Options     Right[K[2;119H[37m[44m┌<─ /tmp ────────────────────────────────────────────────────────────────────────────────────────────────────────.[^]>┐[3;2H[1m[33m[44m'n                                            Name                                             (B[m[37m[44m│[1m[33m[44m Size  (B[m[37m[44m│[1m[33m[44mModify time (B[m[37m[44m││[1m[33m[44m'n                                            Name                                              (B[m[37m[44m│[1m[33m[44m Size  (B[m[37m[44m│[1m[33m[44mModify time (B[m[37m[44m│[4;119H│[1m[37m[44m/..                                                                                             (B[m[37m[44m│[1m[37m[44mUP--DIR(B[m[37m[44m│[1m[37m[44mAug 12 16:13(B[m[37m[44m│[5;119H│[1m[37m[44m/.ICE-unix                                                                                      (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│[6;119H│[1m[37m[44m/.Test-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│[7;119H│[1m[37m[44m/.X11-unix                                                                                      (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│[8;119H│[1m[37m[44m/.XIM-unix                                                                                      (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│[9;119H│[1m[37m[44m/.font-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018(B[m[37m[44m│[10;119H│[1m[37m[44m/mc-root                                                                                        (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:20(B[m[37m[44m│[11;119H│[1m[37m[44m/oldvar                                                                                         (B[m[37m[44m│[1m[37m[44m    238(B[m[37m[44m│[1m[37m[44mAug 12 16:20(B[m[37m[44m│[12;119H│[1m[37m[44m/systemd-private-7489039c3b884fbcadac67b717e1ec7d-chronyd.service-ddlJh8                        (B[m[37m[44m│[1m[37m[44m     17(B[m[37m[44m│[1m[37m[44mAug 12 16:08(B[m[37m[44m│[13;119H│[1m[37m[44m/systemd-private-d2e2323d9a7d4abd82f8e709e9ae0667-chronyd.service-rJhRXi                        (B[m[37m[44m│[1m[37m[44m     17(B[m[37m[44m│[1m[37m[44mAug 12 15:59(B[m[37m[44m│[14;119H│[1m[37m[44m/vol_00                                                                                         (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:09(B[m[37m[44m│[15;119H│[1m[32m[44m*ks-script-Vef3rE                                                                               (B[m[37m[44m│[1m[32m[44m   3361(B[m[37m[44m│[1m[32m[44mMay 12  2018(B[m[37m[44m│[16;119H│[1m[32m[44m*ks-script-f5cTjE                                                                               (B[m[37m[44m│[1m[32m[44m    836(B[m[37m[44m│[1m[32m[44mMay 12  2018(B[m[37m[44m│[17;119H│[1m[32m[44m*vagrant-shell                                                                                  (B[m[37m[44m│[1m[32m[44m    154(B[m[37m[44m│[1m[32m[44mAug 12 15:59(B[m[37m[44m│[18;119H│ yum.log                                                                                        │      0│May 12  2018│[19;119H│                                                                                                │       │            │[20;119H│                                                                                                │       │            │[21;119H│                                                                                                │       │            │[22;119H│                                                                                                │       │            │[23;119H│                                                                                                │       │            │[24;119H│                                                                                                │       │            │[25;119H│                                                                                                │       │            │[26;119H│                                                                                                │       │            │[27;119H│                                                                                                │       │            │[28;119H│                                                                                                │       │            │[29;119H│                                                                                                │       │            │[30;119H│                                                                                                │       │            │[31;119H│                                                                                                │       │            │[32;119H│                                                                                                │       │            │[33;119H│                                                                                                │       │            │[34;119H│                                                                                                │       │            │[35;119H│                                                                                                │       │            │[36;119H│                                                                                                │       │            │[37;119H│                                                                                                │       │            │[38;119H│                                                                                                │       │            │[39;119H│                                                                                                │       │            │[40;119H│                                                                                                │       │            │[41;119H│                                                                                                │       │            │[42;119H│                                                                                                │       │            │[43;119H│                                                                                                │       │            │[44;119H│                                                                                                │       │            │[45;119H│                                                                                                │       │            │[46;119H│                                                                                                │       │            │[47;119H│                                                                                                │       │            │[48;119H│                                                                                                │       │            │[49;119H│                                                                                                │       │            │[50;119H│                                                                                                │       │            │[51;119H│                                                                                                │       │            │[52;119H│                                                                                                │       │            │[53;119H│                                                                                                │       │            │[54;119H│                                                                                                │       │            │[55;119H│                                                                                                │       │            │[56;119H│                                                                                                │       │            │[57;119H│                                                                                                │       │            │[58;119H│                                                                                                │       │            │[59;119H│                                                                                                │       │            │[60;119H│                                                                                                │       │            │[61;2H────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤[62;2HUP--DIR                                                                                                             ││UP--DIR                                                                                                              │[63;119H└───────────────────────────────────────────────────────────────────────────────────────────────── 7364M/8182M (90%) ─┘[65;1H[39m[49m#[233C[37m[44m[^][65;3H[4;2H[1m[37m[44m/..                                                                                            (B[m[37m[44m│[1m[37m[44mUP--DIR(B[m[37m[44m│[1m[37m[44mAug 12 16:13[5;2H(B[m[30m[46m/.ICE-unix                                                                                     │      6│May 12  2018[62;2H[37m[44m/.ICE-unix[65;3H[5;2H[1m[37m[44m/.ICE-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[6;2H(B[m[30m[46m/.Test-unix                                                                                    │      6│May 12  2018[62;4H[37m[44mTest-unix[65;3H[6;2H[1m[37m[44m/.Test-unix                                                                                    (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[7;2H(B[m[30m[46m/.X11-unix                                                                                     │      6│May 12  2018[62;4H[37m[44mX11-unix [65;3H[7;2H[1m[37m[44m/.X11-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[8;2H(B[m[30m[46m/.XIM-unix                                                                                     │      6│May 12  2018[62;5H[37m[44mIM[65;3H[8;2H[1m[37m[44m/.XIM-unix                                                                                     (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[9;2H(B[m[30m[46m/.font-unix                                                                                    │      6│May 12  2018[62;4H[37m[44mfont-unix[65;3H[9;2H[1m[37m[44m/.font-unix                                                                                    (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mMay 12  2018[10;2H(B[m[30m[46m/mc-root                                                                                       │      6│Aug 12 16:20[62;3H[37m[44mmc-root   [65;3H[10;2H[1m[37m[44m/mc-root                                                                                       (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mAug 12 16:20[11;2H(B[m[30m[46m/oldvar                                                                                        │    238│Aug 12 16:20[62;3H[37m[44moldvar [65;3H]0;mc [root@lvm]:/tmp/oldvar>[2;9H[30m[47m/oldvar [4;2H[46m/..                                                                                            │UP--DIR│Aug 12 16:20[5;3H[1m[37m[44madm      [94CApr 11[6;3Hcache     [90C44[7;3Hdb       [91C34[8;3Hempty    [91C18[9;3Hgames     [93CApr 11[10;3Hgopher [97Cpr 11  2018[11;2H/kerberos                                                                                      (B[m[37m[44m│[1m[37m[44m     18(B[m[37m[44m│[1m[37m[44mMay 12  2018[12;3Hlib                                                                    [27C4096[11C13[13;3Hlocal                                                                  [29C 6(B[m[37m[44m│[1m[37m[44mApr 11  2018[14;3Hlog   [92C409[13C8[15;2H~mail                                                                                          (B[m[37m[44m│[1m[37m[44m     10(B[m[37m[44m│[1m[37m[44mAug 12 16:13[16;2H/nis                                                                                           (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mApr 11  2018[17;2H/opt                                                                                           (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mApr 11  2018[18;2H/preserve                                                                                      (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mApr 11  2018[19;2H/spool                                                                                         (B[m[37m[44m│[1m[37m[44m     87(B[m[37m[44m│[1m[37m[44mMay 12  2018[20;2H/tmp                                                                                           (B[m[37m[44m│[1m[37m[44m    164(B[m[37m[44m│[1m[37m[44mAug 12 16:17[21;2H/yp                                                                                            (B[m[37m[44m│[1m[37m[44m      6(B[m[37m[44m│[1m[37m[44mApr 11  2018[22;2H[31m!lock                                                                                          (B[m[37m[44m│[1m[31m[44m     11(B[m[37m[44m│[1m[31m[44mAug 12 16:13[23;2H!run                                                                                           (B[m[37m[44m│[1m[31m[44m      6(B[m[37m[44m│[1m[31m[44mAug 12 16:13[62;2H(B[m[37m[44mUP--DIR[65;3H[21;91H[30m[47m                                                        [22;91H ┌──────────────[34m The Midnight Commander [30m──────────────┐ [23;91H │ Do you really want to quit the Midnight Commander? │ [24;91H ├────────────────────────────────────────────────────┤ [25;91H │                  [46m[ [34mY[30mes ][47m  [ [34mN[30mo ]                   │ [26;91H └────────────────────────────────────────────────────┘ [27;91H                                                        [25;113H[64;7H[39m[49mThe file listing format can be customized; do "man mc" for details.[64;237H[1;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[1;237H[?1015l[?1002l[?1001r[?1l>[66;1H(B[m[39;49m[K[?1049l[?47l8[m[39;49m
+]0;root@lvm:/tmp/oldvar[root@lvm oldvar]# cd /boot/
+]0;root@lvm:/boot[root@lvm boot]# umount /mnt/
+]0;root@lvm:/boot[root@lvm boot]# mpo[K[Kount /dev/vg_var/lv_var /var/[K
+]0;root@lvm:/boot[root@lvm boot]# echo "`blkid | grep var: | awk '{print $2}'` /var ext4 defaults 0 0" >> /etc/fstab
+]0;root@lvm:/boot[root@lvm boot]# cat /etc/fstab 
+
+#
+# /etc/fstab
+# Created by anaconda on Sat May 12 18:50:26 2018
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+/dev/mapper/VolGroup00-LogVol00 /                       xfs     defaults        0 0
+UUID=570897ca-e759-4c81-90cf-389da6eee4cc /boot                   xfs     defaults        0 0
+/dev/mapper/VolGroup00-LogVol01 swap                    swap    defaults        0 0
+UUID="c1f87139-7141-4c99-8cb0-1a108b093968" /var ext4 defaults 0 0
+]0;root@lvm:/boot[root@lvm boot]# exit
+]0;root@lvm:~[root@lvm ~]# exit
+
+Script done on Mon 12 Aug 2019 04:22:06 PM MSK
