@@ -1,0 +1,2 @@
+
+0 * * * * /srb/bin/flock -xn /var/lock/pars.lock -c 'source /root/tools/pars.sh 5 10 admin_mail
