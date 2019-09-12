@@ -1,0 +1,6 @@
+- name: Install nginx & Copy conf & Restart
+  hosts: web # группа серверов из файла hosts
+  become: true
+
+  roles:
+    - deploy_nginx
