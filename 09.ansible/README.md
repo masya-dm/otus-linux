@@ -1,4 +1,4 @@
-1. Из директория Ansible скомандовать vagrant up, поднимется 2 серверами с именами redhat и debian
+1. Из директория 09.ansible скомандовать vagrant up, поднимется 2 серверами с именами redhat и debian
 2. Отсюда же можно скомандовать ansible-playbook ./deploy_nginx. Пакет nginx будет утсановлен на оба сервера.
     В плэйбуке указана группа web из файла hosts в которую входят оба сервера.
     Роль создавал через команду ansible-galaxy init role_name.
