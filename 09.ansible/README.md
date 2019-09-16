@@ -1,6 +1,6 @@
 **Установка nginx на redhat и debian.**
 - Из директория *09.ansible* скомандовать vagrant up, поднимется 2 серверами с именами redhat и debian
-- Отсюда же можно скомандовать ansible-playbook ./deploy_nginx. 
+- Отсюда же можно скомандовать ansible-playbook ./deploy_nginx.yml. 
   - Пакет nginx будет утсановлен на оба сервера.
   - В плэйбуке указана группа web из файла hosts в которую входят оба сервера и роль deploy_nginx.
   - Роль создавал через команду ansible-galaxy init role_name.
