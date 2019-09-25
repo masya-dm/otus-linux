@@ -6,5 +6,5 @@
 - Dockerfile писал первый раз ;) но вроде всё вышло как надо. Качает пакеты, создаёт репозиторий  и тд. 
   - cd ./docker
   - docker build -t otus:v1 .
-  - docker run -d -p 80:80 otus:v1
-  Репозиторий будет доступен по адресу http://dockerhost_ip/repo
+  - docker run -d -p 80:80 otus:v1 
+  - Репозиторий будет доступен по адресу http://dockerhost_ip/repo
