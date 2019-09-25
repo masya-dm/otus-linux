@@ -7,4 +7,4 @@
   - cd ./docker
   - docker build -t otus:v1 .
   - docker run -d -p 80:80 otus:v1 
-  - Репозиторий будет доступен по адресу http://dockerhost_ip/repo
+  - Репозиторий будет доступен по адресу http://docker_engine_ip/repo
