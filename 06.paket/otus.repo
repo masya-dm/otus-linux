@@ -1,0 +1,6 @@
+[otus-repo]
+name=otus-repo
+baseurl=http://81.3.176.218:5002/repo
+enabled=1
+gpgcheck=0
+
