@@ -14,7 +14,7 @@
  - Присоединяем его к наблюдаемому хосту - **Настрока->Узлы сети->Выбрать хост->Шаблоны->Соеденить с новыми шаблонами->Выбрать шаблон Iostat-Disk-Utilization-Template->Добавить->Обновить**.  
 
 На стороне клиента:
- - Установить пакет sysstat.
+ - Установить пакет **sysstat**.
  - **cd ./zabbix-extensions/files/iostat/**
  - Содержимое iostat.conf скопировать либо в конец файла **/etc/zabbix/zabbix_agentd.conf** либо файл целиком положить в **/etc/zabbix/zabbix_agentd.conf.d/** и  
 в раскоментировать строку **Include=/etc/zabbix/zabbix_agentd.conf** в файле **/etc/zabbix/zabbix_agentd.conf**.
