@@ -17,6 +17,7 @@
 в раскоментировать строку **Include=/etc/zabbix/zabbix_agentd.conf** в файле **/etc/zabbix/zabbix_agentd.conf**.
  - Скопировать директорию ./scripts в /usr/libexec/zabbix-extensions/ или любую другую директорию, не забыв поправить пути до них в iostat.conf
  - Добавить в cron, **crontab -e -> * * * * * /usr/libexec/zabbix-extensions/scripts/iostat-collect.sh /tmp/iostat.out 60 &>/dev/null**
- - Перезапустить агента zabbix ->  **systemctl restart zabbix-agent.service**
+ - Перезапустить агента zabbix ->  **systemctl restart zabbix-agent.service**  
+
 Примерно через час с небольшим можно будет добавлять графики в комлексный экран наблюдаемого хоста. 
 За ошибками и прочим можно смотреть через интерфейс zabbix server - Мониторинг->Последние данные->Наблюдаемый хост->Iostat. 
