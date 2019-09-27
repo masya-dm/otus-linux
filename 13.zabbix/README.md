@@ -4,10 +4,12 @@
 
 **Настройка мониторинга дисков.**
 - git clone https://github.com/lesovsky/zabbix-extensions.git
-- cd ./zabbix-extensions/files/iostat/
+- cd ./zabbix-extensions/files/iostat/  
+
 На стороне zabbix сервера: 
  - **iostat-disk-utilization-template.xml** импортируем через web интерфейс - **Настройка->Шаблоны->Импорт**.
- - Присоединяем его к наблюдаемому хосту - **Настрока->Узлы сети->Выбрать хост->Шаблоны->Соеденить с новыми шаблонами->Выбрать шаблон Iostat-Disk-Utilization-Template->Добавить->Обновить**.
+ - Присоединяем его к наблюдаемому хосту - **Настрока->Узлы сети->Выбрать хост->Шаблоны->Соеденить с новыми шаблонами->Выбрать шаблон Iostat-Disk-Utilization-Template->Добавить->Обновить**.  
+
 На стороне клиента:
  - Установить пакет sysstat -> **yum install -y sysstat**.
  - **cd ./zabbix-extensions/files/iostat/**
