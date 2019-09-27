@@ -1,4 +1,4 @@
-**zabbix**
+**Zabbix**
 ![alt text](https://github.com/masya-dm/otus-linux/blob/master/13.zabbix/zabbix.jpg)  
 
 Для комплексного экрана использовал графики из стандартного шаблона **Template OS Linux + шаблон Iostat-Disk-Utilization-Template**.  
