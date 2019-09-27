@@ -8,12 +8,12 @@
 - git clone https://github.com/lesovsky/zabbix-extensions.git
 - cd ./zabbix-extensions/files/iostat/  
 
-На стороне __zabbix сервера__:
+На стороне _zabbix сервера_:
  - Установить пакет zabbix-get. 
  - **iostat-disk-utilization-template.xml** импортируем через web интерфейс - **Настройка->Шаблоны->Импорт**.
  - Присоединяем его к наблюдаемому хосту - **Настрока->Узлы сети->Выбрать хост->Шаблоны->Соеденить с новыми шаблонами->Выбрать шаблон Iostat-Disk-Utilization-Template->Добавить->Обновить**.  
 
-На __стороне клиента__:
+На _стороне клиента_:
  - Установить пакет **sysstat**.
  - **cd ./zabbix-extensions/files/iostat/**
  - Содержимое iostat.conf скопировать либо в конец файла **/etc/zabbix/zabbix_agentd.conf** либо файл целиком положить в **/etc/zabbix/zabbix_agentd.conf.d/** и  
