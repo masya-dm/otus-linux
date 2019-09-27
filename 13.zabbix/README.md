@@ -29,3 +29,4 @@
 За ошибками и прочим можно смотреть через интерфейс zabbix server - **Мониторинг->Последние данные->Наблюдаемый хост->Iostat.**  
 
 ![alt text](https://github.com/masya-dm/otus-linux/blob/master/13.zabbix/zabbix-01.jpg)
+
