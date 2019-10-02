@@ -14,4 +14,5 @@
   - docker pull 151082/otus.nginx.alpine:v1
   - docker run -d -p 80:80 151082/otus.nginx.alpine:v1 ->  **можно одну эту команду без предыдущей**.  
 
+https://cloud.docker.com/u/151082/repository/list
 
