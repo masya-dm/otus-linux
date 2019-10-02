@@ -11,8 +11,7 @@
   - docker tag image_id 151082/otus.nginx.alpine:v1 
   - docker push 151082/otus.nginx.alpine
 - Проверка
-  - docker system prune -fa -> **тут надо осторожней, команда потрёт все незапущенные image в системе**
   - docker pull 151082/otus.nginx.alpine:v1
-  - docker run -d -p 80:80 151082/otus.nginx.alpine:v1  
+  - docker run -d -p 80:80 151082/otus.nginx.alpine:v1 ->  **можно одну эту команду без предыдущей**.  
 
 
