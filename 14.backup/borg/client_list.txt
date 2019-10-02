@@ -1,0 +1,698 @@
+etc-backup-2019-10-01_07:24:08       Tue, 2019-10-01 07:24:10 [47096319928032e20258cc01e392c9eefdc95a61eb5a66c60d08bf3b4f0e967b]
+drwxr-xr-x root   root          0 Tue, 2019-10-01 07:23:25 etc
+-rw-r--r-- root   root        346 Sat, 2019-06-01 17:18:12 etc/fstab
+lrwxrwxrwx root   root         17 Sat, 2019-06-01 17:13:31 etc/mtab -> /proc/self/mounts
+-rw-r--r-- root   root       2388 Sat, 2019-06-01 17:17:18 etc/libuser.conf
+-rw-r--r-- root   root       2043 Sat, 2019-06-01 17:17:19 etc/login.defs
+-rw-r--r-- root   root         37 Sat, 2019-06-01 17:17:19 etc/vconsole.conf
+lrwxrwxrwx root   root         25 Sat, 2019-06-01 17:17:19 etc/localtime -> ../usr/share/zoneinfo/UTC
+-rw-r--r-- root   root         19 Sat, 2019-06-01 17:17:19 etc/locale.conf
+-rw-r--r-- root   root          7 Mon, 2019-09-30 11:58:48 etc/hostname
+-rw-r--r-- root   root        560 Mon, 2019-09-30 12:10:56 etc/group
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:13:49 etc/pm
+drwxr-xr-x root   root          0 Wed, 2018-04-11 04:59:55 etc/pm/config.d
+drwxr-xr-x root   root          0 Wed, 2018-04-11 04:59:55 etc/pm/power.d
+drwxr-xr-x root   root          0 Wed, 2018-04-11 04:59:55 etc/pm/sleep.d
+-rw-r--r-- root   root        163 Sat, 2019-06-01 17:13:49 etc/.updated
+-rw-r--r-- root   root      12288 Mon, 2019-09-30 11:52:58 etc/aliases.db
+-rw-r--r-- root   root         37 Thu, 2019-09-05 13:05:40 etc/centos-release
+-rw-r--r-- root   root         51 Thu, 2019-09-05 13:05:40 etc/centos-release-upstream
+-rw-r--r-- root   root         23 Thu, 2019-09-05 13:05:40 etc/issue
+-rw-r--r-- root   root         22 Thu, 2019-09-05 13:05:40 etc/issue.net
+-rw-r--r-- root   root        393 Thu, 2019-09-05 13:05:40 etc/os-release
+lrwxrwxrwx root   root         14 Mon, 2019-09-30 11:53:30 etc/redhat-release -> centos-release
+lrwxrwxrwx root   root         14 Mon, 2019-09-30 11:53:30 etc/system-release -> centos-release
+-rw-r--r-- root   root         23 Thu, 2019-09-05 13:05:40 etc/system-release-cpe
+lrwxrwxrwx root   root         10 Sat, 2019-06-01 17:13:44 etc/rc0.d -> rc.d/rc0.d
+lrwxrwxrwx root   root         11 Sat, 2019-06-01 17:13:44 etc/init.d -> rc.d/init.d
+lrwxrwxrwx root   root         10 Sat, 2019-06-01 17:13:44 etc/rc1.d -> rc.d/rc1.d
+lrwxrwxrwx root   root         10 Sat, 2019-06-01 17:13:44 etc/rc2.d -> rc.d/rc2.d
+lrwxrwxrwx root   root         10 Sat, 2019-06-01 17:13:44 etc/rc3.d -> rc.d/rc3.d
+lrwxrwxrwx root   root         10 Sat, 2019-06-01 17:13:44 etc/rc4.d -> rc.d/rc4.d
+lrwxrwxrwx root   root         10 Sat, 2019-06-01 17:13:44 etc/rc5.d -> rc.d/rc5.d
+lrwxrwxrwx root   root         10 Sat, 2019-06-01 17:13:44 etc/rc6.d -> rc.d/rc6.d
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:51 etc/prelink.conf.d
+-rw-r--r-- root   root        184 Tue, 2018-05-15 23:56:07 etc/prelink.conf.d/nss-softokn-prelink.conf
+-rw-r--r-- root   root         57 Wed, 2017-08-02 12:47:48 etc/prelink.conf.d/fipscheck.conf
+-rw-r--r-- root   root        220 Wed, 2019-01-30 13:58:45 etc/prelink.conf.d/grub2.conf
+-rw-r--r-- root   root       1938 Tue, 2019-08-06 23:00:32 etc/nsswitch.conf.rpmnew
+-rw-r--r-- root   root       1634 Tue, 2012-12-25 03:02:13 etc/rpc
+-rw-r--r-- root   root       1735 Wed, 2019-05-08 13:37:04 etc/nsswitch.conf.bak
+-rw-r--r-- root   root       1518 Fri, 2013-06-07 14:31:32 etc/aliases
+-rw-r--r-- root   root       2853 Tue, 2018-10-30 19:48:10 etc/bashrc
+-rw-r--r-- root   root       1620 Tue, 2018-10-30 19:48:10 etc/csh.cshrc
+-rw-r--r-- root   root        866 Tue, 2018-10-30 19:48:10 etc/csh.login
+-rw-r--r-- root   root          0 Tue, 2018-10-30 19:48:10 etc/environment
+-rw-r--r-- root   root          0 Fri, 2013-06-07 14:31:32 etc/exports
+-rw-r--r-- root   root         70 Tue, 2018-10-30 19:48:10 etc/filesystems
+-rw-r--r-- root   root          9 Fri, 2013-06-07 14:31:32 etc/host.conf
+-rw-r--r-- root   root        370 Fri, 2013-06-07 14:31:32 etc/hosts.allow
+-rw-r--r-- root   root        460 Fri, 2013-06-07 14:31:32 etc/hosts.deny
+-rw-r--r-- root   root        942 Fri, 2013-06-07 14:31:32 etc/inputrc
+-rw-r--r-- root   root          0 Fri, 2013-06-07 14:31:32 etc/motd
+-rw-r--r-- root   root        233 Fri, 2013-06-07 14:31:32 etc/printcap
+-rw-r--r-- root   root       1819 Tue, 2018-10-30 19:48:10 etc/profile
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:38 etc/profile.d
+-rw-r--r-- root   root         80 Tue, 2018-10-30 19:48:10 etc/profile.d/csh.local
+-rw-r--r-- root   root         81 Tue, 2018-10-30 19:48:10 etc/profile.d/sh.local
+-rw-r--r-- root   root        201 Fri, 2017-03-24 16:39:09 etc/profile.d/colorgrep.sh
+-rw-r--r-- root   root        196 Fri, 2017-03-24 16:39:09 etc/profile.d/colorgrep.csh
+-rw-r--r-- root   root       1741 Tue, 2018-10-30 14:37:47 etc/profile.d/colorls.csh
+-rw-r--r-- root   root       1606 Tue, 2018-10-30 14:37:47 etc/profile.d/colorls.sh
+-rw-r--r-- root   root        164 Mon, 2014-01-27 20:47:50 etc/profile.d/which2.csh
+-rw-r--r-- root   root        169 Mon, 2014-01-27 20:47:50 etc/profile.d/which2.sh
+-rw-r--r-- root   root        123 Thu, 2015-07-30 23:47:02 etc/profile.d/less.csh
+-rw-r--r-- root   root        121 Thu, 2015-07-30 23:47:02 etc/profile.d/less.sh
+-rw-r--r-- root   root        771 Tue, 2018-10-30 22:57:05 etc/profile.d/256term.csh
+-rw-r--r-- root   root        841 Tue, 2018-10-30 22:57:05 etc/profile.d/256term.sh
+-rw-r--r-- root   root       1706 Tue, 2018-10-30 22:57:05 etc/profile.d/lang.csh
+-rw-r--r-- root   root       2703 Tue, 2018-10-30 22:57:05 etc/profile.d/lang.sh
+-rw-r--r-- root   root        660 Tue, 2014-06-10 00:05:26 etc/profile.d/bash_completion.sh
+-rw-r--r-- root   root       6545 Tue, 2018-10-30 19:48:10 etc/protocols
+-rw-r--r-- root   root     670293 Fri, 2013-06-07 14:31:32 etc/services
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:47 etc/systemd
+-rw-r--r-- root   root       1127 Thu, 2019-04-25 17:19:29 etc/systemd/user.conf
+-rw-r--r-- root   root        720 Thu, 2019-04-25 17:19:29 etc/systemd/bootchart.conf
+-rw-r--r-- root   root        615 Thu, 2019-04-25 17:19:29 etc/systemd/coredump.conf
+-rw-r--r-- root   root        983 Thu, 2019-04-25 17:19:29 etc/systemd/journald.conf
+-rw-r--r-- root   root        957 Thu, 2019-04-25 17:19:29 etc/systemd/logind.conf
+-rw-r--r-- root   root       1552 Thu, 2019-04-25 17:19:29 etc/systemd/system.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:17:19 etc/systemd/system
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:49 etc/systemd/system/system-update.target.wants
+lrwxrwxrwx root   root         54 Sat, 2019-06-01 17:14:49 etc/systemd/system/system-update.target.wants/systemd-readahead-drop.service -> /usr/lib/systemd/system/systemd-readahead-drop.service
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:01 etc/systemd/system/network-online.target.wants
+lrwxrwxrwx root   root         58 Sat, 2019-06-01 17:15:01 etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service -> /usr/lib/systemd/system/NetworkManager-wait-online.service
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:25 etc/systemd/system/remote-fs.target.wants
+lrwxrwxrwx root   root         41 Sat, 2019-06-01 17:15:25 etc/systemd/system/remote-fs.target.wants/nfs-client.target -> /usr/lib/systemd/system/nfs-client.target
+lrwxrwxrwx root   root         37 Sat, 2019-06-01 17:17:19 etc/systemd/system/default.target -> /lib/systemd/system/multi-user.target
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:58:38 etc/systemd/system/multi-user.target.wants
+lrwxrwxrwx root   root         39 Mon, 2019-09-30 11:58:38 etc/systemd/system/multi-user.target.wants/vboxadd.service -> /usr/lib/systemd/system/vboxadd.service
+lrwxrwxrwx root   root         47 Mon, 2019-09-30 11:58:38 etc/systemd/system/multi-user.target.wants/vboxadd-service.service -> /usr/lib/systemd/system/vboxadd-service.service
+lrwxrwxrwx root   root         40 Sat, 2019-06-01 17:14:49 etc/systemd/system/multi-user.target.wants/remote-fs.target -> /usr/lib/systemd/system/remote-fs.target
+lrwxrwxrwx root   root         39 Sat, 2019-06-01 17:14:52 etc/systemd/system/multi-user.target.wants/rpcbind.service -> /usr/lib/systemd/system/rpcbind.service
+lrwxrwxrwx root   root         46 Sat, 2019-06-01 17:14:53 etc/systemd/system/multi-user.target.wants/rhel-configure.service -> /usr/lib/systemd/system/rhel-configure.service
+lrwxrwxrwx root   root         37 Sat, 2019-06-01 17:14:54 etc/systemd/system/multi-user.target.wants/crond.service -> /usr/lib/systemd/system/crond.service
+lrwxrwxrwx root   root         46 Sat, 2019-06-01 17:15:01 etc/systemd/system/multi-user.target.wants/NetworkManager.service -> /usr/lib/systemd/system/NetworkManager.service
+lrwxrwxrwx root   root         37 Sat, 2019-06-01 17:15:24 etc/systemd/system/multi-user.target.wants/tuned.service -> /usr/lib/systemd/system/tuned.service
+lrwxrwxrwx root   root         41 Sat, 2019-06-01 17:15:25 etc/systemd/system/multi-user.target.wants/nfs-client.target -> /usr/lib/systemd/system/nfs-client.target
+lrwxrwxrwx root   root         40 Sat, 2019-06-01 17:15:26 etc/systemd/system/multi-user.target.wants/vmtoolsd.service -> /usr/lib/systemd/system/vmtoolsd.service
+lrwxrwxrwx root   root         36 Sat, 2019-06-01 17:15:29 etc/systemd/system/multi-user.target.wants/sshd.service -> /usr/lib/systemd/system/sshd.service
+lrwxrwxrwx root   root         38 Sat, 2019-06-01 17:15:30 etc/systemd/system/multi-user.target.wants/auditd.service -> /usr/lib/systemd/system/auditd.service
+lrwxrwxrwx root   root         39 Sat, 2019-06-01 17:15:33 etc/systemd/system/multi-user.target.wants/postfix.service -> /usr/lib/systemd/system/postfix.service
+lrwxrwxrwx root   root         42 Sat, 2019-06-01 17:15:33 etc/systemd/system/multi-user.target.wants/irqbalance.service -> /usr/lib/systemd/system/irqbalance.service
+lrwxrwxrwx root   root         39 Sat, 2019-06-01 17:15:33 etc/systemd/system/multi-user.target.wants/rsyslog.service -> /usr/lib/systemd/system/rsyslog.service
+lrwxrwxrwx root   root         39 Sat, 2019-06-01 17:15:34 etc/systemd/system/multi-user.target.wants/chronyd.service -> /usr/lib/systemd/system/chronyd.service
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/systemd/system/sysinit.target.wants
+lrwxrwxrwx root   root         48 Sat, 2019-06-01 17:14:53 etc/systemd/system/sysinit.target.wants/rhel-autorelabel.service -> /usr/lib/systemd/system/rhel-autorelabel.service
+lrwxrwxrwx root   root         47 Sat, 2019-06-01 17:14:53 etc/systemd/system/sysinit.target.wants/rhel-domainname.service -> /usr/lib/systemd/system/rhel-domainname.service
+lrwxrwxrwx root   root         49 Sat, 2019-06-01 17:14:53 etc/systemd/system/sysinit.target.wants/rhel-import-state.service -> /usr/lib/systemd/system/rhel-import-state.service
+lrwxrwxrwx root   root         48 Sat, 2019-06-01 17:14:53 etc/systemd/system/sysinit.target.wants/rhel-loadmodules.service -> /usr/lib/systemd/system/rhel-loadmodules.service
+lrwxrwxrwx root   root         46 Sat, 2019-06-01 17:15:01 etc/systemd/system/dbus-org.freedesktop.NetworkManager.service -> /usr/lib/systemd/system/NetworkManager.service
+lrwxrwxrwx root   root         57 Sat, 2019-06-01 17:15:01 etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service -> /usr/lib/systemd/system/NetworkManager-dispatcher.service
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:49 etc/systemd/system/getty.target.wants
+lrwxrwxrwx root   root         38 Sat, 2019-06-01 17:14:49 etc/systemd/system/getty.target.wants/getty@tty1.service -> /usr/lib/systemd/system/getty@.service
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/systemd/system/basic.target.wants
+lrwxrwxrwx root   root         42 Sat, 2019-06-01 17:14:53 etc/systemd/system/basic.target.wants/rhel-dmesg.service -> /usr/lib/systemd/system/rhel-dmesg.service
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:26 etc/systemd/system/vmtoolsd.service.requires
+lrwxrwxrwx root   root         39 Sat, 2019-06-01 17:15:26 etc/systemd/system/vmtoolsd.service.requires/vgauthd.service -> /usr/lib/systemd/system/vgauthd.service
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:49 etc/systemd/system/default.target.wants
+lrwxrwxrwx root   root         56 Sat, 2019-06-01 17:14:49 etc/systemd/system/default.target.wants/systemd-readahead-replay.service -> /usr/lib/systemd/system/systemd-readahead-replay.service
+lrwxrwxrwx root   root         57 Sat, 2019-06-01 17:14:49 etc/systemd/system/default.target.wants/systemd-readahead-collect.service -> /usr/lib/systemd/system/systemd-readahead-collect.service
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:52 etc/systemd/system/sockets.target.wants
+lrwxrwxrwx root   root         38 Sat, 2019-06-01 17:14:52 etc/systemd/system/sockets.target.wants/rpcbind.socket -> /usr/lib/systemd/system/rpcbind.socket
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/systemd/system/local-fs.target.wants
+lrwxrwxrwx root   root         45 Sat, 2019-06-01 17:14:53 etc/systemd/system/local-fs.target.wants/rhel-readonly.service -> /usr/lib/systemd/system/rhel-readonly.service
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:33 etc/systemd/system/dev-virtio\x2dports-org.qemu.guest_agent.0.device.wants
+lrwxrwxrwx root   root         48 Sat, 2019-06-01 17:15:33 etc/systemd/system/dev-virtio\x2dports-org.qemu.guest_agent.0.device.wants/qemu-guest-agent.service -> /usr/lib/systemd/system/qemu-guest-agent.service
+drwxr-xr-x root   root          0 Thu, 2019-04-25 17:19:29 etc/systemd/user
+-rw-r--r-- root   root         44 Tue, 2018-10-30 19:48:10 etc/shells
+-rw-r--r-- root   root          0 Tue, 2018-10-30 19:48:10 etc/subgid
+-rw-r--r-- root   root          0 Tue, 2018-10-30 19:48:10 etc/subuid
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:58:48 etc/sysconfig
+-rw-r--r-- root   root        102 Sat, 2019-06-01 17:18:37 etc/sysconfig/anaconda
+-rw-r--r-- root   root         21 Sat, 2019-06-01 17:19:25 etc/sysconfig/cloud-info
+-rw-r--r-- root   root         73 Tue, 2018-10-30 23:00:54 etc/sysconfig/rpcbind
+-rw-r--r-- root   root          0 Mon, 2014-06-09 22:14:31 etc/sysconfig/run-parts
+-rw-r--r-- root   root         15 Fri, 2017-08-04 08:01:03 etc/sysconfig/rdisc
+-rw-r--r-- root   root        798 Tue, 2018-10-30 22:57:05 etc/sysconfig/init
+-rw-r--r-- root   root        634 Tue, 2018-10-30 22:57:05 etc/sysconfig/netconsole
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:58:52 etc/sysconfig/network-scripts
+-rwxr-xr-x root   root      12075 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-ippp
+lrwxrwxrwx root   root         24 Sat, 2019-06-01 17:14:53 etc/sysconfig/network-scripts/ifdown -> ../../../usr/sbin/ifdown
+-rwxr-xr-x root   root        654 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifdown-bnep
+-rwxr-xr-x root   root       6532 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifdown-eth
+-rwxr-xr-x root   root        781 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifdown-ippp
+-rwxr-xr-x root   root       4540 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifdown-ipv6
+lrwxrwxrwx root   root         11 Sat, 2019-06-01 17:14:53 etc/sysconfig/network-scripts/ifdown-isdn -> ifdown-ippp
+-rwxr-xr-x root   root       2130 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifdown-post
+-rwxr-xr-x root   root       1068 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifdown-ppp
+-rwxr-xr-x root   root        870 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifdown-routes
+-rwxr-xr-x root   root       1456 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifdown-sit
+-rwxr-xr-x root   root       1462 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifdown-tunnel
+lrwxrwxrwx root   root         22 Sat, 2019-06-01 17:14:53 etc/sysconfig/network-scripts/ifup -> ../../../usr/sbin/ifup
+-rwxr-xr-x root   root      12415 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-aliases
+-rwxr-xr-x root   root        910 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-bnep
+-rwxr-xr-x root   root      13475 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-eth
+-rwxr-xr-x root   root      11893 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-ipv6
+lrwxrwxrwx root   root          9 Sat, 2019-06-01 17:14:53 etc/sysconfig/network-scripts/ifup-isdn -> ifup-ippp
+-rwxr-xr-x root   root        650 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-plip
+-rwxr-xr-x root   root       1064 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-plusb
+-rwxr-xr-x root   root       4997 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-post
+-rwxr-xr-x root   root       4154 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-ppp
+-rwxr-xr-x root   root       2001 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-routes
+-rwxr-xr-x root   root       3303 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-sit
+-rwxr-xr-x root   root       2711 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-tunnel
+-rwxr-xr-x root   root       1836 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/ifup-wireless
+-rwxr-xr-x root   root       5419 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/init.ipv6-global
+-rw-r--r-- root   root      20671 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/network-functions
+-rw-r--r-- root   root      31027 Fri, 2018-08-24 10:23:27 etc/sysconfig/network-scripts/network-functions-ipv6
+-rwxr-xr-x root   root       1621 Fri, 2017-03-17 17:41:23 etc/sysconfig/network-scripts/ifdown-Team
+-rw-r--r-- root   root         86 Mon, 2019-09-30 11:58:48 etc/sysconfig/network-scripts/ifcfg-eth0
+-rw-r--r-- root   root        254 Mon, 2019-09-30 11:58:48 etc/sysconfig/network-scripts/ifcfg-lo
+-rwxr-xr-x root   root       1556 Fri, 2017-03-17 17:41:23 etc/sysconfig/network-scripts/ifdown-TeamPort
+-rwxr-xr-x root   root       1755 Fri, 2017-03-17 17:41:23 etc/sysconfig/network-scripts/ifup-Team
+-rwxr-xr-x root   root       1876 Fri, 2017-03-17 17:41:23 etc/sysconfig/network-scripts/ifup-TeamPort
+-rw-r--r-- root   root        905 Tue, 2018-10-30 22:57:05 etc/sysconfig/readonly-root
+-rw-r--r-- root   root        428 Tue, 2018-10-30 22:32:50 etc/sysconfig/samba
+lrwxrwxrwx root   root         15 Sat, 2019-06-01 17:14:58 etc/sysconfig/grub -> ../default/grub
+lrwxrwxrwx root   root         17 Sat, 2019-06-01 17:14:59 etc/sysconfig/selinux -> ../selinux/config
+-rw-r--r-- root   root        395 Tue, 2018-04-10 20:29:40 etc/sysconfig/rpc-rquotad
+-rw-r--r-- root   root        610 Tue, 2018-10-30 23:03:42 etc/sysconfig/wpa_supplicant
+-rw-r--r-- root   root         22 Mon, 2019-09-30 11:58:48 etc/sysconfig/network
+-rw-r--r-- root   root         73 Tue, 2018-10-30 22:46:59 etc/sysconfig/firewalld
+-rw-r--r-- root   root       1679 Wed, 2018-11-07 16:56:34 etc/sysconfig/nfs
+-rw-r--r-- root   root        150 Tue, 2019-05-14 21:34:15 etc/sysconfig/cpupower
+-rw-r--r-- root   root        200 Tue, 2018-10-30 14:55:19 etc/sysconfig/man-db
+-rw-r--r-- root   root        480 Sat, 2019-06-01 17:17:19 etc/sysconfig/authconfig
+-rw-r--r-- root   root        903 Tue, 2018-04-10 20:31:59 etc/sysconfig/irqbalance
+-rw-r--r-- root   root        196 Tue, 2018-10-30 14:49:15 etc/sysconfig/rsyslog
+-rw-r--r-- root   root        911 Tue, 2018-10-30 14:53:44 etc/sysconfig/qemu-ga
+-rw-r--r-- root   root         46 Thu, 2018-04-12 17:37:56 etc/sysconfig/chronyd
+-rw-r--r-- root   root         12 Thu, 2019-04-25 17:17:06 etc/sysconfig/rsyncd
+-rw-r--r-- root   root        180 Sat, 2019-06-01 17:17:12 etc/sysconfig/kernel
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:20 etc/sysconfig/cbq
+-rw-r--r-- root   root         11 Wed, 2019-04-24 14:03:30 etc/sysconfig/cbq/avpkt
+-rw-r--r-- root   root         79 Wed, 2019-04-24 14:03:30 etc/sysconfig/cbq/cbq-0000.example
+drwxr-xr-x root   root          0 Tue, 2018-10-30 22:57:05 etc/sysconfig/console
+drwxr-xr-x root   root          0 Tue, 2018-10-30 22:57:05 etc/sysconfig/modules
+-rw-r--r-- root   root         94 Fri, 2017-03-24 16:39:09 etc/GREP_COLORS
+-rw-r--r-- root   root       5090 Tue, 2018-10-30 14:37:47 etc/DIR_COLORS
+-rw-r--r-- root   root       5725 Tue, 2018-10-30 14:37:47 etc/DIR_COLORS.256color
+-rw-r--r-- root   root       4669 Tue, 2018-10-30 14:37:47 etc/DIR_COLORS.lightbgcolor
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:54:58 etc/rpm
+-rw-r--r-- root   root         66 Thu, 2019-09-05 13:05:40 etc/rpm/macros.dist
+-rw-r--r-- root   root       5134 Mon, 2019-01-21 22:05:28 etc/rpm/macros.perl
+-rw-r--r-- root   root        641 Tue, 2019-01-29 16:59:06 etc/krb5.conf
+drwxr-xr-x root   root          0 Wed, 2017-08-02 15:54:38 etc/gcrypt
+-rw-r--r-- root   root       1982 Tue, 2018-10-30 19:57:15 etc/virc
+-rw-r--r-- root   root        111 Tue, 2018-10-30 18:16:04 etc/magic
+-rw-r--r-- root   root        767 Wed, 2018-10-31 00:20:36 etc/netconfig
+-rw-r--r-- root   root       1787 Tue, 2014-06-10 02:17:54 etc/request-key.conf
+-rw-r--r-- root   root         38 Tue, 2018-10-30 14:59:46 etc/fuse.conf
+-rw-r--r-- root   root       4849 Wed, 2018-04-11 04:07:10 etc/idmapd.conf
+drwxr-xr-x root   root          0 Tue, 2018-10-30 22:57:05 etc/rwtab.d
+-rw-r--r-- root   root         24 Tue, 2018-10-30 19:12:50 etc/rwtab.d/logrotate
+-rw-r--r-- root   root        570 Thu, 2018-08-16 14:00:53 etc/my.cnf
+-rw-r--r-- root   root        662 Wed, 2013-07-31 11:46:23 etc/logrotate.conf
+-rw-r--r-- root   root        842 Tue, 2018-10-30 22:02:26 etc/GeoIP.conf
+-rw-r--r-- root   root        858 Tue, 2018-10-30 22:02:26 etc/GeoIP.conf.default
+-rw-r--r-- root   root        970 Mon, 2018-11-05 01:53:57 etc/yum.conf
+-rw-r--r-- root   root        547 Mon, 2019-09-30 11:58:37 etc/group-
+-rw-r--r-- root   root       1285 Fri, 2018-11-02 17:40:52 etc/dracut.conf
+-rw-r--r-- root   root       1131 Mon, 2019-09-30 11:58:37 etc/passwd-
+drwxr-xr-x root   root          0 Tue, 2018-10-30 23:08:22 etc/rsyslog.d
+-rw-r--r-- root   root         49 Thu, 2019-04-25 17:19:31 etc/rsyslog.d/listen.conf
+lrwxrwxrwx root   root         13 Sat, 2019-06-01 17:14:47 etc/rc.local -> rc.d/rc.local
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:52:53 etc/udev
+-r--r--r-- root   root    7942570 Mon, 2019-09-30 11:52:53 etc/udev/hwdb.bin
+-rw-r--r-- root   root         49 Thu, 2019-04-25 17:19:29 etc/udev/udev.conf
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:58:37 etc/udev/rules.d
+-rw-r--r-- root   root        134 Mon, 2019-09-30 11:58:44 etc/udev/rules.d/60-vboxadd.rules
+-r--r--r-- root   root         33 Mon, 2019-09-30 11:52:52 etc/machine-id
+-rw-r--r-- root   root        182 Mon, 2019-09-30 11:58:48 etc/hosts
+-rw-r--r-- root   root       1746 Sat, 2019-06-01 17:14:49 etc/nsswitch.conf
+-rw-r--r-- root   root        216 Tue, 2019-01-29 17:46:22 etc/sestatus.conf
+drwxr-xr-x root   root          0 Mon, 2014-06-09 22:14:31 etc/cron.weekly
+-rw-r--r-- root   root        451 Mon, 2014-06-09 22:14:31 etc/crontab
+-rw-r--r-- root   root         16 Sat, 2019-06-01 17:17:19 etc/adjtime
+-rw-r--r-- root   root        511 Tue, 2018-10-30 22:57:05 etc/inittab
+-rw-r--r-- root   root         58 Tue, 2018-10-30 22:57:05 etc/networks
+-rw-r--r-- root   root        966 Tue, 2018-10-30 22:57:05 etc/rwtab
+-rw-r--r-- root   root        212 Tue, 2018-10-30 22:57:05 etc/statetab
+-rw-r--r-- root   root         73 Mon, 2019-09-30 11:58:52 etc/resolv.conf
+-rw-r--r-- root   root        449 Tue, 2018-10-30 22:57:05 etc/sysctl.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/samba
+-rw-r--r-- root   root         20 Tue, 2018-10-30 22:32:50 etc/samba/lmhosts
+-rw-r--r-- root   root        706 Tue, 2018-10-30 22:32:50 etc/samba/smb.conf
+-rw-r--r-- root   root      11327 Tue, 2018-10-30 22:32:50 etc/samba/smb.conf.example
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:54 etc/cron.d
+-rw-r--r-- root   root        128 Tue, 2018-11-20 14:22:40 etc/cron.d/0hourly
+lrwxrwxrwx root   root         22 Sat, 2019-06-01 17:14:58 etc/grub2.cfg -> ../boot/grub2/grub.cfg
+-rw-r--r-- root   root      23809 Mon, 2019-09-30 11:56:22 etc/ld.so.cache
+-rw-r--r-- root   root       4479 Wed, 2019-05-15 21:01:43 etc/wgetrc
+-rw-r--r-- root   root       1170 Mon, 2019-09-30 12:10:56 etc/passwd
+-rw-r--r-- root   root       1317 Wed, 2018-04-11 02:44:54 etc/ethertypes
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:25 etc/gssproxy
+drwxr-xr-x root   root          0 Wed, 2018-11-07 16:56:34 etc/exports.d
+-rw-r--r-- root   root        967 Wed, 2018-11-07 16:56:34 etc/nfs.conf
+-rw-r--r-- root   root       3391 Wed, 2018-11-07 16:56:34 etc/nfsmount.conf
+-rw-r--r-- root   root       5171 Tue, 2018-10-30 20:26:28 etc/man_db.conf
+-rw-r--r-- root   root        112 Tue, 2018-10-30 14:58:18 etc/e2fsck.conf
+-rw-r--r-- root   root        936 Tue, 2018-10-30 19:03:11 etc/mke2fs.conf
+-rw-r--r-- root   root       1108 Thu, 2018-04-12 17:37:54 etc/chrony.conf
+-rw-r--r-- root   root        458 Thu, 2019-04-25 17:17:06 etc/rsyncd.conf
+-rw-r--r-- root   root       3232 Tue, 2018-10-30 14:49:15 etc/rsyslog.conf
+-rw-r--r-- root   root         28 Wed, 2013-02-27 20:29:02 etc/ld.so.conf
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:56:07 etc/alternatives
+lrwxrwxrwx root   root         15 Mon, 2019-09-30 11:56:07 etc/alternatives/ld -> /usr/bin/ld.bfd
+lrwxrwxrwx root   root         34 Sat, 2019-06-01 17:14:08 etc/alternatives/libnssckbi.so.x86_64 -> /usr/lib64/pkcs11/p11-kit-trust.so
+lrwxrwxrwx root   root         32 Sat, 2019-06-01 17:15:28 etc/alternatives/cifs-idmap-plugin -> /usr/lib64/cifs-utils/idmapwb.so
+lrwxrwxrwx root   root         26 Sat, 2019-06-01 17:15:33 etc/alternatives/mta -> /usr/sbin/sendmail.postfix
+lrwxrwxrwx root   root         22 Sat, 2019-06-01 17:15:33 etc/alternatives/mta-mailq -> /usr/bin/mailq.postfix
+lrwxrwxrwx root   root         27 Sat, 2019-06-01 17:15:33 etc/alternatives/mta-newaliases -> /usr/bin/newaliases.postfix
+lrwxrwxrwx root   root         23 Sat, 2019-06-01 17:15:33 etc/alternatives/mta-pam -> /etc/pam.d/smtp.postfix
+lrwxrwxrwx root   root         22 Sat, 2019-06-01 17:15:33 etc/alternatives/mta-rmail -> /usr/bin/rmail.postfix
+lrwxrwxrwx root   root         25 Sat, 2019-06-01 17:15:33 etc/alternatives/mta-sendmail -> /usr/lib/sendmail.postfix
+lrwxrwxrwx root   root         38 Sat, 2019-06-01 17:15:33 etc/alternatives/mta-mailqman -> /usr/share/man/man1/mailq.postfix.1.gz
+lrwxrwxrwx root   root         43 Sat, 2019-06-01 17:15:33 etc/alternatives/mta-newaliasesman -> /usr/share/man/man1/newaliases.postfix.1.gz
+lrwxrwxrwx root   root         41 Sat, 2019-06-01 17:15:33 etc/alternatives/mta-sendmailman -> /usr/share/man/man1/sendmail.postfix.1.gz
+lrwxrwxrwx root   root         40 Sat, 2019-06-01 17:15:33 etc/alternatives/mta-aliasesman -> /usr/share/man/man5/aliases.postfix.5.gz
+lrwxrwxrwx root   root         45 Sat, 2019-06-01 17:16:09 etc/alternatives/libwbclient.so.0.14-64 -> /usr/lib64/samba/wbclient/libwbclient.so.0.14
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:38 etc/bash_completion.d
+-rw-r--r-- root   root        829 Tue, 2018-10-30 19:20:50 etc/bash_completion.d/iprutils
+-rw-r--r-- root   root      11272 Tue, 2018-10-30 22:58:11 etc/bash_completion.d/yum-utils.bash
+-rw-r--r-- root   root       1458 Mon, 2013-11-25 21:02:52 etc/bash_completion.d/redefine_filedir
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:47 etc/xdg
+drwxr-xr-x root   root          0 Wed, 2018-04-11 04:59:55 etc/xdg/autostart
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:47 etc/xdg/systemd
+lrwxrwxrwx root   root         18 Sat, 2019-06-01 17:14:47 etc/xdg/systemd/user -> ../../systemd/user
+drwxr-xr-x root   root          0 Tue, 2019-08-06 23:03:23 etc/ld.so.conf.d
+-rw-r--r-- root   root         17 Thu, 2018-08-16 15:05:36 etc/ld.so.conf.d/mariadb-x86_64.conf
+-r--r--r-- root   root         63 Tue, 2019-05-14 21:28:29 etc/ld.so.conf.d/kernel-3.10.0-957.12.2.el7.x86_64.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:13:55 etc/ssl
+lrwxrwxrwx root   root         16 Sat, 2019-06-01 17:13:55 etc/ssl/certs -> ../pki/tls/certs
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:53:30 etc/yum.repos.d
+-rw-r--r-- root   root       1664 Thu, 2019-09-05 13:05:40 etc/yum.repos.d/CentOS-Base.repo
+-rw-r--r-- root   root       1309 Thu, 2019-09-05 13:05:40 etc/yum.repos.d/CentOS-CR.repo
+-rw-r--r-- root   root        649 Thu, 2019-09-05 13:05:40 etc/yum.repos.d/CentOS-Debuginfo.repo
+-rw-r--r-- root   root        630 Thu, 2019-09-05 13:05:40 etc/yum.repos.d/CentOS-Media.repo
+-rw-r--r-- root   root       1331 Thu, 2019-09-05 13:05:40 etc/yum.repos.d/CentOS-Sources.repo
+-rw-r--r-- root   root       6639 Thu, 2019-09-05 13:05:40 etc/yum.repos.d/CentOS-Vault.repo
+-rw-r--r-- root   root        314 Thu, 2019-09-05 13:05:40 etc/yum.repos.d/CentOS-fasttrack.repo
+drwxr-xr-x root   root          0 Tue, 2019-01-29 17:32:22 etc/krb5.conf.d
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:31 etc/sasl2
+-rw-r--r-- root   root         49 Tue, 2018-10-30 16:50:24 etc/sasl2/smtpd.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:12 etc/python
+-rw-r--r-- root   root        381 Tue, 2019-04-09 14:31:15 etc/python/cert-verification.cfg
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:20 etc/iproute2
+-rw-r--r-- root   root         85 Wed, 2019-04-24 14:03:30 etc/iproute2/bpf_pinning
+-rw-r--r-- root   root         75 Wed, 2019-04-24 14:03:30 etc/iproute2/ematch_map
+-rw-r--r-- root   root         31 Wed, 2019-04-24 14:03:30 etc/iproute2/group
+-rw-r--r-- root   root        262 Wed, 2019-04-24 14:03:30 etc/iproute2/nl_protos
+-rw-r--r-- root   root        735 Wed, 2019-04-24 14:03:30 etc/iproute2/rt_dsfield
+-rw-r--r-- root   root        326 Wed, 2019-04-24 14:03:30 etc/iproute2/rt_protos
+-rw-r--r-- root   root        112 Wed, 2019-04-24 14:03:30 etc/iproute2/rt_realms
+-rw-r--r-- root   root         92 Wed, 2019-04-24 14:03:30 etc/iproute2/rt_scopes
+-rw-r--r-- root   root         87 Wed, 2019-04-24 14:03:30 etc/iproute2/rt_tables
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:17:18 etc/openldap
+-rw-r--r-- root   root        365 Sat, 2019-06-01 17:17:18 etc/openldap/ldap.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:26 etc/openldap/certs
+-rw-r--r-- root   root      16384 Sat, 2019-06-01 17:14:26 etc/openldap/certs/secmod.db
+-rw-r--r-- root   root      65536 Sat, 2019-06-01 17:14:26 etc/openldap/certs/cert8.db
+-rw-r--r-- root   root      16384 Sat, 2019-06-01 17:14:26 etc/openldap/certs/key3.db
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:34 etc/logrotate.d
+-rw-r--r-- root   root        103 Mon, 2018-11-05 01:53:57 etc/logrotate.d/yum
+-rw-r--r-- root   root        115 Tue, 2018-10-30 22:32:50 etc/logrotate.d/samba
+-rw-r--r-- root   root        100 Tue, 2018-10-30 23:03:42 etc/logrotate.d/wpa_supplicant
+-rw-r--r-- root   root        224 Tue, 2018-10-30 14:49:15 etc/logrotate.d/syslog
+-rw-r--r-- root   root        160 Fri, 2017-09-15 06:32:09 etc/logrotate.d/chrony
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:59 etc/selinux
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:28 etc/selinux/targeted
+-rw-r--r-- root   root        607 Thu, 2019-04-25 17:35:35 etc/selinux/targeted/setrans.conf
+-rw-r--r-- root   root        129 Thu, 2019-04-25 17:35:35 etc/selinux/targeted/.policy.sha512
+-rw-r--r-- root   root       2623 Thu, 2019-04-25 17:35:35 etc/selinux/targeted/booleans.subs_dist
+drwxr-xr-x root   root          0 Thu, 2019-04-25 17:35:35 etc/selinux/targeted/logins
+-rw-r--r-- root   root        106 Thu, 2019-04-25 17:35:44 etc/selinux/targeted/seusers
+drwx------ root   root          0 Sat, 2019-06-01 17:15:27 etc/selinux/targeted/active
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:27 etc/selinux/targeted/contexts
+-rw-r--r-- root   root        262 Thu, 2019-04-25 17:35:35 etc/selinux/targeted/contexts/customizable_types
+-rw-r--r-- root   root        195 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/dbus_contexts
+-rw-r--r-- root   root        254 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/default_contexts
+-rw-r--r-- root   root        148 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/default_type
+-rw-r--r-- root   root         29 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/failsafe_context
+-rw-r--r-- root   root         30 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/initrc_context
+-rw-r--r-- root   root        333 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/lxc_contexts
+-rw-r--r-- root   root         33 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/removable_context
+-rw-r--r-- root   root         74 Thu, 2019-04-25 17:35:35 etc/selinux/targeted/contexts/securetty_types
+-rw-r--r-- root   root       1170 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/sepgsql_contexts
+-rw-r--r-- root   root         53 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/snapperd_contexts
+-rw-r--r-- root   root         57 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/systemd_contexts
+-rw-r--r-- root   root         35 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/userhelper_context
+-rw-r--r-- root   root         62 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/virtual_domain_context
+-rw-r--r-- root   root         71 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/virtual_image_context
+-rw-r--r-- root   root       2920 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/x_contexts
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:27 etc/selinux/targeted/contexts/files
+-rw-r--r-- root   root     383650 Thu, 2019-04-25 17:35:44 etc/selinux/targeted/contexts/files/file_contexts
+-rw-r--r-- root   root    1364079 Thu, 2019-04-25 17:41:53 etc/selinux/targeted/contexts/files/file_contexts.bin
+-rw-r--r-- root   root      13338 Thu, 2019-04-25 17:35:44 etc/selinux/targeted/contexts/files/file_contexts.homedirs
+-rw-r--r-- root   root      43840 Thu, 2019-04-25 17:35:44 etc/selinux/targeted/contexts/files/file_contexts.homedirs.bin
+-rw-r--r-- root   root          0 Thu, 2019-04-25 17:35:35 etc/selinux/targeted/contexts/files/file_contexts.subs
+-rw-r--r-- root   root        514 Thu, 2019-04-25 17:35:35 etc/selinux/targeted/contexts/files/file_contexts.subs_dist
+-rw-r--r-- root   root        139 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/files/media
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:27 etc/selinux/targeted/contexts/users
+-rw-r--r-- root   root        253 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/users/guest_u
+-rw-r--r-- root   root        389 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/users/root
+-rw-r--r-- root   root        514 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/users/staff_u
+-rw-r--r-- root   root        496 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/users/sysadm_u
+-rw-r--r-- root   root        578 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/users/unconfined_u
+-rw-r--r-- root   root        353 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/users/user_u
+-rw-r--r-- root   root        307 Thu, 2019-04-25 17:34:56 etc/selinux/targeted/contexts/users/xguest_u
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:28 etc/selinux/targeted/policy
+-rw-r--r-- root   root    3881917 Thu, 2019-04-25 17:35:44 etc/selinux/targeted/policy/policy.31
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:26 etc/selinux/targeted/modules
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:26 etc/selinux/targeted/modules/active
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:26 etc/selinux/targeted/modules/active/modules
+-rw-r--r-- root   root       2321 Tue, 2018-10-30 23:44:32 etc/selinux/semanage.conf
+-rw-r--r-- root   root        542 Sat, 2019-06-01 17:17:19 etc/selinux/config
+drwx------ root   root          0 Sat, 2019-06-01 17:14:59 etc/selinux/final
+drwxr-xr-x root   root          0 Tue, 2018-10-30 23:44:32 etc/selinux/tmp
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:57:55 etc/depmod.d
+-rw-r--r-- root   root         75 Mon, 2019-09-30 11:57:55 etc/depmod.d/vboxvideo-upstream.conf
+-rw-r--r-- root   root        116 Tue, 2018-10-30 23:02:50 etc/depmod.d/dist.conf
+drwxr-xr-x root   root          0 Thu, 2019-04-25 17:19:29 etc/binfmt.d
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:50 etc/polkit-1
+drwxr-x--- root   polkitd        0 Sat, 2019-06-01 17:14:50 etc/polkit-1/localauthority
+drwx------ polkitd root          0 Sat, 2019-06-01 17:14:50 etc/polkit-1/rules.d
+drwxr-xr-x root   root          0 Mon, 2014-06-09 22:08:33 etc/polkit-1/localauthority.conf.d
+drwxr-xr-x root   root          0 Tue, 2018-05-15 14:56:25 etc/NetworkManager
+drwxr-xr-x root   root          0 Thu, 2019-03-14 10:19:00 etc/NetworkManager/conf.d
+drwxr-xr-x root   root          0 Thu, 2019-03-14 10:19:00 etc/NetworkManager/dnsmasq-shared.d
+-rw-r--r-- root   root       2145 Thu, 2019-03-14 10:19:02 etc/NetworkManager/NetworkManager.conf
+drwxr-xr-x root   root          0 Thu, 2019-03-14 10:19:00 etc/NetworkManager/dnsmasq.d
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:34 etc/NetworkManager/dispatcher.d
+drwxr-xr-x root   root          0 Thu, 2019-03-14 10:19:02 etc/NetworkManager/dispatcher.d/no-wait.d
+-rwxr-xr-x root   root        175 Fri, 2018-08-24 10:23:27 etc/NetworkManager/dispatcher.d/00-netreport
+drwxr-xr-x root   root          0 Thu, 2019-03-14 10:19:00 etc/NetworkManager/dispatcher.d/pre-down.d
+-rwxr-xr-x root   root       1123 Tue, 2018-05-15 13:03:42 etc/NetworkManager/dispatcher.d/11-dhclient
+-rwxr-xr-x root   root        985 Fri, 2017-09-15 06:32:09 etc/NetworkManager/dispatcher.d/20-chrony
+drwxr-xr-x root   root          0 Thu, 2019-03-14 10:19:02 etc/NetworkManager/dispatcher.d/pre-up.d
+drwxr-xr-x root   root          0 Thu, 2019-03-14 10:19:00 etc/NetworkManager/system-connections
+drwxr-xr-x root   root          0 Tue, 2018-10-30 22:57:05 etc/statetab.d
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:26 etc/vmware-tools
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:26 etc/vmware-tools/vgauth
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:26 etc/vmware-tools/vgauth/schemas
+-rw-r--r-- root   root       5783 Fri, 2018-11-02 16:20:32 etc/vmware-tools/vgauth/schemas/XMLSchema-hasFacetAndProperty.xsd
+-rw-r--r-- root   root       1215 Fri, 2018-11-02 16:20:32 etc/vmware-tools/vgauth/schemas/XMLSchema-instance.xsd
+-rw-r--r-- root   root      16072 Fri, 2018-11-02 16:20:32 etc/vmware-tools/vgauth/schemas/XMLSchema.dtd
+-rw-r--r-- root   root      86435 Fri, 2018-11-02 16:20:32 etc/vmware-tools/vgauth/schemas/XMLSchema.xsd
+-rw-r--r-- root   root        473 Fri, 2018-11-02 16:20:32 etc/vmware-tools/vgauth/schemas/catalog.xml
+-rw-r--r-- root   root       6356 Fri, 2018-11-02 16:20:32 etc/vmware-tools/vgauth/schemas/datatypes.dtd
+-rw-r--r-- root   root      13160 Fri, 2018-11-02 16:20:32 etc/vmware-tools/vgauth/schemas/saml-schema-assertion-2.0.xsd
+-rw-r--r-- root   root       5146 Fri, 2018-11-02 16:20:32 etc/vmware-tools/vgauth/schemas/xenc-schema.xsd
+-rw-r--r-- root   root       8768 Fri, 2018-11-02 16:20:32 etc/vmware-tools/vgauth/schemas/xml.xsd
+-rw-r--r-- root   root      10144 Fri, 2018-11-02 16:20:32 etc/vmware-tools/vgauth/schemas/xmldsig-core-schema.xsd
+-rw-r--r-- root   root        453 Fri, 2018-11-02 16:20:33 etc/vmware-tools/guestproxy-ssl.conf
+-rwxr-xr-x root   root       4364 Fri, 2018-11-02 16:20:33 etc/vmware-tools/poweroff-vm-default
+-rwxr-xr-x root   root       4364 Fri, 2018-11-02 16:20:33 etc/vmware-tools/poweron-vm-default
+-rwxr-xr-x root   root       4364 Fri, 2018-11-02 16:20:33 etc/vmware-tools/resume-vm-default
+-rwxr-xr-x root   root       1478 Fri, 2018-11-02 16:20:33 etc/vmware-tools/statechange.subr
+-rwxr-xr-x root   root       4364 Fri, 2018-11-02 16:20:33 etc/vmware-tools/suspend-vm-default
+-rw-r--r-- root   root         60 Fri, 2018-11-02 16:20:32 etc/vmware-tools/vgauth.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:26 etc/vmware-tools/scripts
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:26 etc/vmware-tools/scripts/vmware
+-rwxr-xr-x root   root      15128 Fri, 2018-11-02 16:20:33 etc/vmware-tools/scripts/vmware/network
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:26 etc/vmware-tools/GuestProxyData
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:26 etc/vmware-tools/GuestProxyData/server
+-rw-r--r-- root   root       1196 Sat, 2019-06-01 17:15:26 etc/vmware-tools/GuestProxyData/server/cert.pem
+drwx------ root   root          0 Sat, 2019-06-01 17:15:26 etc/vmware-tools/GuestProxyData/trusted
+drwxr-x--- root   root          0 Mon, 2019-09-30 11:52:52 etc/audit
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:33 etc/qemu-ga
+-rwxr-xr-x root   root       1176 Tue, 2018-04-24 16:30:47 etc/qemu-ga/fsfreeze-hook
+drwxr-xr-x root   root          0 Tue, 2018-10-30 21:29:01 etc/qemu-ga/fsfreeze-hook.d
+drwx------ root   root          0 Sat, 2019-06-01 17:16:46 etc/grub.d
+drwxr-xr-x root   root          0 Wed, 2017-09-06 22:08:12 etc/terminfo
+drwxr-xr-x root   root          0 Fri, 2017-08-04 13:45:50 etc/chkconfig.d
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:47 etc/X11
+drwxr-xr-x root   root          0 Wed, 2018-04-11 04:59:55 etc/X11/fontpath.d
+drwxr-xr-x root   root          0 Thu, 2019-04-25 17:19:31 etc/X11/xorg.conf.d
+drwxr-xr-x root   root          0 Wed, 2018-04-11 04:59:55 etc/X11/applnk
+drwxr-xr-x root   root          0 Wed, 2018-04-11 04:59:55 etc/opt
+drwxr-xr-x root   root          0 Tue, 2014-06-10 04:03:22 etc/popt.d
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:13:54 etc/pkcs11
+drwxr-xr-x root   root          0 Fri, 2017-08-04 23:36:45 etc/pkcs11/modules
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:39 etc/yum
+drwxr-xr-x root   root          0 Mon, 2018-11-05 01:53:57 etc/yum/fssnap.d
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:17:18 etc/yum/pluginconf.d
+-rw-r--r-- root   root        279 Tue, 2018-10-30 22:58:11 etc/yum/pluginconf.d/fastestmirror.conf
+-rw-r--r-- root   root        372 Sat, 2019-06-01 17:13:32 etc/yum/pluginconf.d/langpacks.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:47 etc/yum/protected.d
+-rw-r--r-- root   root          8 Thu, 2019-04-25 17:19:31 etc/yum/protected.d/systemd.conf
+-rw-r--r-- root   root        444 Mon, 2018-11-05 01:53:57 etc/yum/version-groups.conf
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:53:30 etc/yum/vars
+-rw-r--r-- root   root          7 Thu, 2019-09-05 13:05:40 etc/yum/vars/contentdir
+-rw-r--r-- root   root          4 Sat, 2019-06-01 17:18:12 etc/yum/vars/infra
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:02 etc/libnl
+-rw-r--r-- root   root       1130 Thu, 2017-08-03 19:48:41 etc/libnl/classid
+-rw-r--r-- root   root       1532 Thu, 2017-08-03 19:48:41 etc/libnl/pktloc
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:18:12 etc/pam.d
+-rw-r--r-- root   root       1030 Sat, 2019-06-01 17:17:19 etc/pam.d/password-auth-ac
+-rw-r--r-- root   root        702 Sat, 2019-06-01 17:17:19 etc/pam.d/fingerprint-auth-ac
+-rw-r--r-- root   root        752 Sat, 2019-06-01 17:17:19 etc/pam.d/smartcard-auth-ac
+-rw-r--r-- root   root        232 Wed, 2018-04-11 03:22:05 etc/pam.d/config-util
+lrwxrwxrwx root   root         19 Sat, 2019-06-01 17:17:19 etc/pam.d/fingerprint-auth -> fingerprint-auth-ac
+-rw-r--r-- root   root        154 Wed, 2018-04-11 03:22:05 etc/pam.d/other
+lrwxrwxrwx root   root         16 Sat, 2019-06-01 17:17:19 etc/pam.d/password-auth -> password-auth-ac
+lrwxrwxrwx root   root         12 Sat, 2019-06-01 17:17:19 etc/pam.d/postlogin -> postlogin-ac
+lrwxrwxrwx root   root         17 Sat, 2019-06-01 17:17:19 etc/pam.d/smartcard-auth -> smartcard-auth-ac
+lrwxrwxrwx root   root         14 Sat, 2019-06-01 17:17:19 etc/pam.d/system-auth -> system-auth-ac
+-rw-r--r-- root   root        192 Thu, 2019-03-14 10:37:10 etc/pam.d/chfn
+-rw-r--r-- root   root        192 Thu, 2019-03-14 10:37:10 etc/pam.d/chsh
+-rw-r--r-- root   root        796 Thu, 2019-03-14 10:37:10 etc/pam.d/login
+-rw-r--r-- root   root        681 Thu, 2019-03-14 10:37:10 etc/pam.d/remote
+-rw-r--r-- root   root        143 Thu, 2019-03-14 10:37:10 etc/pam.d/runuser
+-rw-r--r-- root   root        138 Thu, 2019-03-14 10:37:10 etc/pam.d/runuser-l
+-rw-r--r-- root   root        689 Sat, 2019-06-01 17:18:12 etc/pam.d/su
+-rw-r--r-- root   root        137 Thu, 2019-03-14 10:37:10 etc/pam.d/su-l
+-rw-r--r-- root   root        129 Thu, 2019-04-25 17:19:29 etc/pam.d/systemd-user
+-rw-r--r-- root   root        155 Fri, 2019-03-08 14:27:01 etc/pam.d/polkit-1
+-rw-r--r-- root   root        293 Tue, 2018-11-20 14:22:40 etc/pam.d/crond
+-rw-r--r-- root   root         84 Tue, 2018-10-30 22:38:31 etc/pam.d/vlock
+-rw-r--r-- root   root        278 Fri, 2018-11-02 16:20:33 etc/pam.d/vmtoolsd
+-rw-r--r-- root   root        904 Wed, 2018-04-11 04:21:29 etc/pam.d/sshd
+-rw-r--r-- root   root         76 Tue, 2018-10-30 16:50:24 etc/pam.d/smtp.postfix
+lrwxrwxrwx root   root         25 Sat, 2019-06-01 17:15:33 etc/pam.d/smtp -> /etc/alternatives/mta-pam
+-rw-r--r-- root   root        238 Wed, 2018-10-31 00:36:55 etc/pam.d/sudo
+-rw-r--r-- root   root        216 Wed, 2018-10-31 00:36:55 etc/pam.d/sudo-i
+-rw-r--r-- root   root        188 Tue, 2014-06-10 06:27:55 etc/pam.d/passwd
+-rw-r--r-- root   root       1028 Sat, 2019-06-01 17:17:19 etc/pam.d/system-auth-ac
+-rw-r--r-- root   root        330 Sat, 2019-06-01 17:17:19 etc/pam.d/postlogin-ac
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:27 etc/my.cnf.d
+-rw-r--r-- root   root        232 Fri, 2018-04-20 07:16:54 etc/my.cnf.d/mysql-clients.cnf
+drwxr-xr-x root   root          0 Fri, 2018-07-13 13:05:22 etc/gnupg
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:18:12 etc/modprobe.d
+-rw-r--r-- root   root         17 Sat, 2019-06-01 17:18:12 etc/modprobe.d/nofloppy.conf
+-rw-r--r-- root   root        215 Tue, 2019-05-14 21:33:43 etc/modprobe.d/dccp-blacklist.conf
+-rw-r--r-- root   root        166 Tue, 2018-10-30 22:46:59 etc/modprobe.d/firewalld-sysctls.conf
+-rw-r--r-- root   root        674 Wed, 2018-07-04 19:23:21 etc/modprobe.d/tuned.conf
+-rw-r--r-- root   root        746 Wed, 2018-11-07 16:56:34 etc/modprobe.d/lockd.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:49 etc/dbus-1
+drwxr-xr-x root   root          0 Thu, 2019-03-14 10:18:01 etc/dbus-1/session.d
+-rw-r--r-- root   root        838 Thu, 2019-03-14 10:17:47 etc/dbus-1/session.conf
+-rw-r--r-- root   root        833 Thu, 2019-03-14 10:17:47 etc/dbus-1/system.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:24 etc/dbus-1/system.d
+-rw-r--r-- root   root        947 Thu, 2019-04-25 17:19:29 etc/dbus-1/system.d/org.freedesktop.hostname1.conf
+-rw-r--r-- root   root       2527 Thu, 2019-04-25 17:19:29 etc/dbus-1/system.d/org.freedesktop.import1.conf
+-rw-r--r-- root   root        937 Thu, 2019-04-25 17:19:29 etc/dbus-1/system.d/org.freedesktop.locale1.conf
+-rw-r--r-- root   root       8534 Thu, 2019-04-25 17:19:29 etc/dbus-1/system.d/org.freedesktop.login1.conf
+-rw-r--r-- root   root       3726 Thu, 2019-04-25 17:19:29 etc/dbus-1/system.d/org.freedesktop.machine1.conf
+-rw-r--r-- root   root      10118 Thu, 2019-04-25 17:19:29 etc/dbus-1/system.d/org.freedesktop.systemd1.conf
+-rw-r--r-- root   root        947 Thu, 2019-04-25 17:19:29 etc/dbus-1/system.d/org.freedesktop.timedate1.conf
+-rw-r--r-- root   root        638 Fri, 2019-03-08 14:27:06 etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
+-rw-r--r-- root   root       1096 Tue, 2018-10-30 23:03:42 etc/dbus-1/system.d/wpa_supplicant.conf
+-rw-r--r-- root   root        465 Thu, 2019-03-14 10:19:00 etc/dbus-1/system.d/nm-dispatcher.conf
+-rw-r--r-- root   root        387 Thu, 2019-03-14 10:19:00 etc/dbus-1/system.d/nm-ifcfg-rh.conf
+-rw-r--r-- root   root       9421 Thu, 2019-03-14 10:19:00 etc/dbus-1/system.d/org.freedesktop.NetworkManager.conf
+-rw-r--r-- root   root        409 Fri, 2017-03-17 17:41:23 etc/dbus-1/system.d/teamd.conf
+-rw-r--r-- root   root       1084 Tue, 2018-10-30 22:46:59 etc/dbus-1/system.d/FirewallD.conf
+-rw-r--r-- root   root        587 Wed, 2018-07-04 19:23:21 etc/dbus-1/system.d/com.redhat.tuned.conf
+drwxr-xr-x root   root          0 Thu, 2019-04-25 17:19:29 etc/modules-load.d
+drwxr-xr-x root   root          0 Mon, 2014-06-09 22:14:31 etc/cron.hourly
+-rwxr-xr-x root   root        392 Tue, 2018-11-20 14:22:40 etc/cron.hourly/0anacron
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:58:56 etc/ssh
+-rw-r--r-- root   root        382 Mon, 2019-09-30 11:52:56 etc/ssh/ssh_host_rsa_key.pub
+-rw-r--r-- root   root        162 Mon, 2019-09-30 11:52:56 etc/ssh/ssh_host_ecdsa_key.pub
+-rw-r--r-- root   root         82 Mon, 2019-09-30 11:52:56 etc/ssh/ssh_host_ed25519_key.pub
+-rw-r--r-- root   root     581843 Wed, 2018-04-11 04:21:29 etc/ssh/moduli
+-rw-r--r-- root   root       2276 Wed, 2018-04-11 04:21:29 etc/ssh/ssh_config
+drwxr-x--- root   root          0 Sat, 2019-06-01 17:15:28 etc/dhcp
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:00 etc/wpa_supplicant
+drwxr-x--- root   root          0 Sat, 2019-06-01 17:15:23 etc/firewalld
+drwxr-x--- root   root          0 Sat, 2019-06-01 17:18:12 etc/sudoers.d
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:58:37 etc/kernel
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:58:37 etc/kernel/postinst.d
+-rwxr-xr-x root   root        164 Mon, 2019-09-30 11:58:44 etc/kernel/postinst.d/vboxadd
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:58:37 etc/kernel/prerm.d
+-rwxr-xr-x root   root        172 Mon, 2019-09-30 11:58:44 etc/kernel/prerm.d/vboxadd
+drwxr-xr-x root   root          0 Wed, 2018-04-11 04:59:55 etc/skel
+-rw-r--r-- root   root         18 Tue, 2018-10-30 17:07:12 etc/skel/.bash_logout
+-rw-r--r-- root   root        193 Tue, 2018-10-30 17:07:12 etc/skel/.bash_profile
+-rw-r--r-- root   root        231 Tue, 2018-10-30 17:07:12 etc/skel/.bashrc
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:47 etc/rc.d
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/rc.d/init.d
+-rw-r--r-- root   root       1160 Thu, 2019-04-25 17:19:30 etc/rc.d/init.d/README
+-rw-r--r-- root   root      18281 Fri, 2018-08-24 10:23:27 etc/rc.d/init.d/functions
+-rwxr-xr-x root   root       4569 Fri, 2018-08-24 10:23:27 etc/rc.d/init.d/netconsole
+-rwxr-xr-x root   root       7923 Fri, 2018-08-24 10:23:27 etc/rc.d/init.d/network
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/rc.d/rc3.d
+lrwxrwxrwx root   root         17 Sat, 2019-06-01 17:14:53 etc/rc.d/rc3.d/S10network -> ../init.d/network
+lrwxrwxrwx root   root         20 Sat, 2019-06-01 17:14:53 etc/rc.d/rc3.d/K50netconsole -> ../init.d/netconsole
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/rc.d/rc0.d
+lrwxrwxrwx root   root         17 Sat, 2019-06-01 17:14:53 etc/rc.d/rc0.d/K90network -> ../init.d/network
+lrwxrwxrwx root   root         20 Sat, 2019-06-01 17:14:53 etc/rc.d/rc0.d/K50netconsole -> ../init.d/netconsole
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/rc.d/rc4.d
+lrwxrwxrwx root   root         17 Sat, 2019-06-01 17:14:53 etc/rc.d/rc4.d/S10network -> ../init.d/network
+lrwxrwxrwx root   root         20 Sat, 2019-06-01 17:14:53 etc/rc.d/rc4.d/K50netconsole -> ../init.d/netconsole
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/rc.d/rc1.d
+lrwxrwxrwx root   root         17 Sat, 2019-06-01 17:14:53 etc/rc.d/rc1.d/K90network -> ../init.d/network
+lrwxrwxrwx root   root         20 Sat, 2019-06-01 17:14:53 etc/rc.d/rc1.d/K50netconsole -> ../init.d/netconsole
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/rc.d/rc5.d
+lrwxrwxrwx root   root         17 Sat, 2019-06-01 17:14:53 etc/rc.d/rc5.d/S10network -> ../init.d/network
+lrwxrwxrwx root   root         20 Sat, 2019-06-01 17:14:53 etc/rc.d/rc5.d/K50netconsole -> ../init.d/netconsole
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/rc.d/rc2.d
+lrwxrwxrwx root   root         17 Sat, 2019-06-01 17:14:53 etc/rc.d/rc2.d/S10network -> ../init.d/network
+lrwxrwxrwx root   root         20 Sat, 2019-06-01 17:14:53 etc/rc.d/rc2.d/K50netconsole -> ../init.d/netconsole
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/rc.d/rc6.d
+lrwxrwxrwx root   root         17 Sat, 2019-06-01 17:14:53 etc/rc.d/rc6.d/K90network -> ../init.d/network
+lrwxrwxrwx root   root         20 Sat, 2019-06-01 17:14:53 etc/rc.d/rc6.d/K50netconsole -> ../init.d/netconsole
+-rw-r--r-- root   root        473 Thu, 2019-04-25 17:19:31 etc/rc.d/rc.local
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:55:54 etc/default
+-rw-r--r-- root   root        317 Sat, 2019-06-01 17:17:17 etc/default/grub
+-rw-r--r-- root   root        119 Thu, 2019-03-14 09:25:58 etc/default/useradd
+-rw-r--r-- root   root       1756 Tue, 2019-08-06 23:00:29 etc/default/nss
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:33 etc/pki
+drwx------ root   root          0 Tue, 2018-10-30 23:08:22 etc/pki/rsyslog
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:07 etc/pki/nss-legacy
+-rw-r--r-- root   root        230 Tue, 2019-01-29 17:00:21 etc/pki/nss-legacy/nss-rhel7.config
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:30 etc/pki/CA
+drwxr-xr-x root   root          0 Tue, 2019-03-12 10:12:14 etc/pki/CA/newcerts
+drwx------ root   root          0 Tue, 2019-03-12 10:12:14 etc/pki/CA/private
+drwxr-xr-x root   root          0 Tue, 2019-03-12 10:12:14 etc/pki/CA/certs
+drwxr-xr-x root   root          0 Tue, 2019-03-12 10:12:14 etc/pki/CA/crl
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:13:55 etc/pki/ca-trust
+-rw-r--r-- root   root        166 Mon, 2018-05-14 14:10:13 etc/pki/ca-trust/README
+-rw-r--r-- root   root        980 Mon, 2018-05-14 14:10:13 etc/pki/ca-trust/ca-legacy.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:13:55 etc/pki/ca-trust/extracted
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:13:56 etc/pki/ca-trust/extracted/java
+-rw-r--r-- root   root        726 Mon, 2018-05-14 14:10:13 etc/pki/ca-trust/extracted/java/README
+-r--r--r-- root   root     154279 Sat, 2019-06-01 17:13:56 etc/pki/ca-trust/extracted/java/cacerts
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:13:55 etc/pki/ca-trust/extracted/openssl
+-rw-r--r-- root   root        787 Mon, 2018-05-14 14:10:13 etc/pki/ca-trust/extracted/openssl/README
+-r--r--r-- root   root     257889 Sat, 2019-06-01 17:13:55 etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:13:56 etc/pki/ca-trust/extracted/pem
+-rw-r--r-- root   root        898 Mon, 2018-05-14 14:10:13 etc/pki/ca-trust/extracted/pem/README
+-r--r--r-- root   root     211658 Sat, 2019-06-01 17:13:55 etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+-r--r--r-- root   root     177221 Sat, 2019-06-01 17:13:55 etc/pki/ca-trust/extracted/pem/email-ca-bundle.pem
+-r--r--r-- root   root          0 Sat, 2019-06-01 17:13:56 etc/pki/ca-trust/extracted/pem/objsign-ca-bundle.pem
+-rw-r--r-- root   root        560 Mon, 2018-05-14 14:10:13 etc/pki/ca-trust/extracted/README
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:13:55 etc/pki/ca-trust/source
+drwxr-xr-x root   root          0 Wed, 2018-05-16 04:35:28 etc/pki/ca-trust/source/anchors
+drwxr-xr-x root   root          0 Wed, 2018-05-16 04:35:28 etc/pki/ca-trust/source/blacklist
+-rw-r--r-- root   root        932 Mon, 2018-05-14 14:10:13 etc/pki/ca-trust/source/README
+lrwxrwxrwx root   root         59 Sat, 2019-06-01 17:13:55 etc/pki/ca-trust/source/ca-bundle.legacy.crt -> /usr/share/pki/ca-trust-legacy/ca-bundle.legacy.default.crt
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:13:55 etc/pki/java
+lrwxrwxrwx root   root         40 Sat, 2019-06-01 17:13:55 etc/pki/java/cacerts -> /etc/pki/ca-trust/extracted/java/cacerts
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:07 etc/pki/nssdb
+-rw-r--r-- root   root      65536 Tue, 2019-01-29 17:00:23 etc/pki/nssdb/cert8.db
+-rw-r--r-- root   root       9216 Tue, 2019-01-29 17:00:23 etc/pki/nssdb/cert9.db
+-rw-r--r-- root   root      16384 Tue, 2019-01-29 17:00:24 etc/pki/nssdb/key3.db
+-rw-r--r-- root   root      11264 Tue, 2019-01-29 17:00:24 etc/pki/nssdb/key4.db
+-rw-r--r-- root   root        451 Tue, 2019-01-29 17:00:21 etc/pki/nssdb/pkcs11.txt
+-rw-r--r-- root   root      16384 Tue, 2019-01-29 17:00:25 etc/pki/nssdb/secmod.db
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:13:57 etc/pki/tls
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:30 etc/pki/tls/certs
+lrwxrwxrwx root   root         49 Sat, 2019-06-01 17:13:55 etc/pki/tls/certs/ca-bundle.crt -> /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+lrwxrwxrwx root   root         55 Sat, 2019-06-01 17:13:55 etc/pki/tls/certs/ca-bundle.trust.crt -> /etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt
+-rw-r--r-- root   root       2516 Tue, 2019-03-12 10:12:07 etc/pki/tls/certs/Makefile
+-rwxr-xr-x root   root        610 Tue, 2019-03-12 10:12:07 etc/pki/tls/certs/make-dummy-cert
+-rwxr-xr-x root   root        829 Tue, 2019-03-12 10:12:07 etc/pki/tls/certs/renew-dummy-cert
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:30 etc/pki/tls/misc
+-rwxr-xr-x root   root       5178 Tue, 2019-03-12 10:11:30 etc/pki/tls/misc/CA
+-rwxr-xr-x root   root        119 Tue, 2019-03-12 10:11:30 etc/pki/tls/misc/c_hash
+-rwxr-xr-x root   root        152 Tue, 2019-03-12 10:11:30 etc/pki/tls/misc/c_info
+-rwxr-xr-x root   root        112 Tue, 2019-03-12 10:11:30 etc/pki/tls/misc/c_issuer
+-rwxr-xr-x root   root        110 Tue, 2019-03-12 10:11:30 etc/pki/tls/misc/c_name
+drwxr-xr-x root   root          0 Tue, 2019-03-12 10:11:29 etc/pki/tls/private
+lrwxrwxrwx root   root         49 Sat, 2019-06-01 17:13:55 etc/pki/tls/cert.pem -> /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+-rw-r--r-- root   root      10923 Tue, 2019-03-12 09:57:47 etc/pki/tls/openssl.cnf
+drwxr-xr-x root   root          0 Mon, 2019-09-30 11:53:30 etc/pki/rpm-gpg
+-rw-r--r-- root   root       1690 Thu, 2019-09-05 13:05:40 etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+-rw-r--r-- root   root       1004 Thu, 2019-09-05 13:05:40 etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-Debug-7
+-rw-r--r-- root   root       1690 Thu, 2019-09-05 13:05:40 etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-Testing-7
+drwxr-xr-x root   root          0 Wed, 2018-04-11 04:59:55 etc/xinetd.d
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:13:57 etc/gss
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:02 etc/gss/mech.d
+-rw-r--r-- root   root        189 Tue, 2018-10-30 18:42:38 etc/gss/mech.d/gssproxy.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:06 etc/security
+drwxr-xr-x root   root          0 Wed, 2018-04-11 03:21:59 etc/security/console.apps
+drwxr-xr-x root   root          0 Wed, 2018-04-11 03:21:59 etc/security/console.perms.d
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:05 etc/security/limits.d
+-rw-r--r-- root   root        191 Wed, 2018-04-11 03:22:05 etc/security/limits.d/20-nproc.conf
+-rw-r--r-- root   root       4564 Wed, 2018-04-11 03:21:58 etc/security/access.conf
+-rw-r--r-- root   root         82 Wed, 2018-04-11 03:21:58 etc/security/chroot.conf
+-rw-r--r-- root   root        604 Wed, 2018-04-11 03:21:59 etc/security/console.handlers
+-rw-r--r-- root   root        939 Wed, 2018-04-11 03:21:59 etc/security/console.perms
+-rw-r--r-- root   root       3635 Wed, 2018-04-11 03:22:00 etc/security/group.conf
+-rw-r--r-- root   root       2422 Wed, 2018-04-11 03:22:00 etc/security/limits.conf
+-rw-r--r-- root   root       1440 Wed, 2018-04-11 03:22:01 etc/security/namespace.conf
+drwxr-xr-x root   root          0 Wed, 2018-04-11 03:22:01 etc/security/namespace.d
+-rwxr-xr-x root   root       1019 Wed, 2018-04-11 03:22:01 etc/security/namespace.init
+-rw-r--r-- root   root       2972 Wed, 2018-04-11 03:21:59 etc/security/pam_env.conf
+-rw-r--r-- root   root        419 Wed, 2018-04-11 03:22:02 etc/security/sepermit.conf
+-rw-r--r-- root   root       2179 Wed, 2018-04-11 03:22:03 etc/security/time.conf
+-rw-r--r-- root   root       1718 Tue, 2011-12-06 19:16:48 etc/security/pwquality.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:09 etc/groff
+drwxr-xr-x root   root          0 Mon, 2014-06-09 20:17:16 etc/groff/site-font
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:09 etc/groff/site-tmac
+-rw-r--r-- root   root         96 Mon, 2014-06-09 20:17:15 etc/groff/site-tmac/man.local
+-rw-r--r-- root   root         90 Mon, 2014-06-09 20:17:15 etc/groff/site-tmac/mdoc.local
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:28 etc/request-key.d
+-rw-r--r-- root   root        354 Wed, 2018-11-07 16:56:34 etc/request-key.d/id_resolver.conf
+-rw-r--r-- root   root         50 Thu, 2017-08-03 16:58:31 etc/request-key.d/cifs.idmap.conf
+-rw-r--r-- root   root         52 Thu, 2017-08-03 16:58:31 etc/request-key.d/cifs.spnego.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:36 etc/cron.daily
+-rwxr-xr-x root   root        618 Tue, 2018-10-30 14:55:19 etc/cron.daily/man-db.cron
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:18:12 etc/dracut.conf.d
+-rw-r--r-- root   root         28 Sat, 2019-06-01 17:18:12 etc/dracut.conf.d/vmware-fusion-drivers.conf
+-rw-r--r-- root   root         67 Sat, 2019-06-01 17:18:12 etc/dracut.conf.d/hyperv-drivers.conf
+-rw-r--r-- root   root         25 Sat, 2019-06-01 17:18:12 etc/dracut.conf.d/nofloppy.conf
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/sysctl.d
+lrwxrwxrwx root   root         14 Sat, 2019-06-01 17:14:53 etc/sysctl.d/99-sysctl.conf -> ../sysctl.conf
+drwxr-xr-x root   root          0 Thu, 2019-04-25 17:19:29 etc/tmpfiles.d
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:14:53 etc/ppp
+drwxr-xr-x root   root          0 Tue, 2018-10-30 22:57:05 etc/ppp/peers
+-rwxr-xr-x root   root        386 Fri, 2018-08-24 10:23:27 etc/ppp/ip-down
+-rwxr-xr-x root   root       3214 Fri, 2018-08-24 10:23:27 etc/ppp/ip-down.ipv6to4
+-rwxr-xr-x root   root        430 Fri, 2018-08-24 10:23:27 etc/ppp/ip-up
+-rwxr-xr-x root   root       6426 Fri, 2018-08-24 10:23:27 etc/ppp/ip-up.ipv6to4
+-rwxr-xr-x root   root       1687 Fri, 2018-08-24 10:23:27 etc/ppp/ipv6-down
+-rwxr-xr-x root   root       3182 Fri, 2018-08-24 10:23:27 etc/ppp/ipv6-up
+drwxr-xr-x root   root          0 Mon, 2014-06-09 22:14:31 etc/cron.monthly
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:24 etc/tuned
+drwxr-xr-x root   root          0 Thu, 2019-03-14 10:32:32 etc/tuned/recommend.d
+-rw-r--r-- root   root       1111 Wed, 2018-07-04 19:23:21 etc/tuned/bootcmdline
+-rw-r--r-- root   root          5 Mon, 2019-09-30 11:52:59 etc/tuned/profile_mode
+-rw-r--r-- root   root       1197 Thu, 2019-03-14 10:32:33 etc/tuned/tuned-main.conf
+-rw-r--r-- root   root         14 Mon, 2019-09-30 11:52:59 etc/tuned/active_profile
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:28 etc/cifs-utils
+lrwxrwxrwx root   root         35 Sat, 2019-06-01 17:15:28 etc/cifs-utils/idmap-plugin -> /etc/alternatives/cifs-idmap-plugin
+drwxr-x--- root   root          0 Sat, 2019-06-01 17:15:30 etc/audisp
+drwxr-xr-x root   root          0 Sat, 2019-06-01 17:15:31 etc/postfix
+-rw-r--r-- root   root      20876 Tue, 2018-10-30 16:50:23 etc/postfix/access
+-rw-r--r-- root   root      11883 Tue, 2018-10-30 16:50:23 etc/postfix/canonical
+-rw-r--r-- root   root      10106 Tue, 2018-10-30 16:50:23 etc/postfix/generic
+-rw-r--r-- root   root      21545 Tue, 2018-10-30 16:50:23 etc/postfix/header_checks
+-rw-r--r-- root   root      27176 Tue, 2018-10-30 16:50:24 etc/postfix/main.cf
+-rw-r--r-- root   root       6105 Tue, 2018-10-30 16:50:23 etc/postfix/master.cf
+-rw-r--r-- root   root       6816 Tue, 2018-10-30 16:50:23 etc/postfix/relocated
+-rw-r--r-- root   root      12549 Tue, 2018-10-30 16:50:23 etc/postfix/transport
+-rw-r--r-- root   root      12696 Tue, 2018-10-30 16:50:23 etc/postfix/virtual

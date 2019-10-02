@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-RUN yum install -y wget openssl sed createrepo &&\
+RUN yum install -y wget openssl createrepo &&\
     yum -y autoremove &&\
     yum clean all &&\
     wget https://nginx.org/packages/rhel/7/x86_64/RPMS/nginx-1.16.1-1.el7.ngx.x86_64.rpm &&\
