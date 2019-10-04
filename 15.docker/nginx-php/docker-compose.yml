@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
     nginx:
         image: 151082/otus.nginx:v1
