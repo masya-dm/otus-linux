@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
             systemctl stop firewalld
             setenforce 0
             yum install -y nano rsyslog
-            yes | cp -f /vagrant/conf/server/rsyslog.conf /etc/
+            yes | cp -f /vagrant/conf/log/rsyslog.conf /etc/
             systemctl restart rsyslog.service
           SHELL
 	end
@@ -37,10 +37,10 @@ Vagrant.configure(2) do |config|
             setenforce 0
 	    yum install -y epel-release nano rsyslog
 	    yum install -y nginx
-	    yes | cp -f /vagrant/conf/client/nginx.conf /etc/nginx
-            yes | cp -f /vagrant/conf/client/rsyslog.conf /etc/
-            cp -f /vagrant/conf/client/audit.conf /etc/rsyslog.d/
-            cp -f /vagrant/conf/client/nginx_error.conf /etc/rsyslog.d/
+	    yes | cp -f /vagrant/conf/web/nginx.conf /etc/nginx
+            yes | cp -f /vagrant/conf/web/rsyslog.conf /etc/
+            cp -f /vagrant/conf/web/audit.conf /etc/rsyslog.d/
+            cp -f /vagrant/conf/web/nginx_error.conf /etc/rsyslog.d/
             systemctl enable nginx.service && systemctl start nginx.service && systemctl restart rsyslog.service          
           SHELL
         end
