@@ -1,0 +1,21 @@
+Vagrant.configure(2) do |config|
+	
+    config.vm.define "pam" do |pam|
+	pam.vm.box = "centos/7"
+	pam.vm.hostname = "pam"
+	pam.vm.network "private_network", ip: "192.168.11.151"
+	pam.vm.define "pam"
+	pam.vm.provider :virtualbox do |vb|
+            vb.customize ["modifyvm", :id, "--memory", "256"]
+          end
+    	pam.vm.provision "shell", inline: <<-SHELL
+    	    yes | cp -rf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+            mkdir -p ~root/.ssh; cp ~vagrant/.ssh/auth* ~root/.ssh
+            sed -i '65s/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+            systemctl restart sshd
+            systemctl stop firewalld
+            setenforce 0
+            yum install -y nano 
+          SHELL
+	end
+    end
