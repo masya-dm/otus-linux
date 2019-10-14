@@ -1,4 +1,5 @@
-**pam**
+**pam**  
+**Ограничение входа пользователей.**
 
 - Скопировать **./groups.sh /usr/local/bin/**
 - Добавить строку **account required pam_exec.so /usr/local/bin/test_login.sh** в **/etc/pam.d/sshd**  
