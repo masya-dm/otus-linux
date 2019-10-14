@@ -1,4 +1,7 @@
-<center>PAM</center>
+<p align="justify">
+  PAM
+</p>
+
 
 **Ограничение входа пользователей.**
 
