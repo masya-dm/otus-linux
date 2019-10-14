@@ -16,5 +16,5 @@
 **Назанчение прав root пользователю**  
 
 - **useradd -m -s /bin/bash user_name**
-- **echo "day ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/user_name**
+- **echo "user_name ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/user_name**
 - **sudo -i** под **user_name** после логина.
