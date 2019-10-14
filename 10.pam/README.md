@@ -1,4 +1,4 @@
-<center>**PAM**</center>
+<center>PAM</center>
 
 **Ограничение входа пользователей.**
 
