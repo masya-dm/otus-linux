@@ -13,5 +13,4 @@
 	    iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE  
 	    iptables -t nat -A POSTROUTING -p tcp -d 192.168.0.2 --dport 80 -j SNAT --to-source 192.168.255.3  
 	    iptables -t nat -A PREROUTING -p tcp -i eth0 --dport 80 -j DNAT --to-destination 192.168.0.2:80
-
   - http://ext_vagrant_ip:8080.
