@@ -6,7 +6,7 @@
   - sudo -i
   - /vagrant/knock.sh 192.168.255.1 12222 18223
   - ssh vagrant@192.168.255.1 -i /vagrant/vagrant.key
-- inetRouter
+- **inetRouter**
   - добавил проброс порта в vagrant  box.vm.network "forwarded_port", guest: 80, host:8080
   - добавил маршрут в сеть 192.168.0.0/24
   - три правила в таблицу nat:  
