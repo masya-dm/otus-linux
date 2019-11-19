@@ -10,14 +10,4 @@
   with_items:
     - 'zebra.service'
     - 'ospfd.service'
-
-
-- name: stop quagga
-  systemd:
-    name: '{{ item }}'
-    enabled: no
-    masked: yes
-    state: stopped
-  with_items:
-    - 'zebra.service'
-    - 'ospfd.service'
+...
