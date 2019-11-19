@@ -1,0 +1,6 @@
+- name: Install quagga, Enable qugga, Copy config files, Start quagga
+  hosts: routers
+  become: true
+
+  roles:
+    - quagga

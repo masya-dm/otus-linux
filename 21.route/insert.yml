@@ -1,0 +1,18 @@
+---
+
+- hosts: R2
+  become: yes
+  tasks:
+    - name: insert ! symblol
+      lineinfile: 
+        path: /etc/quagga/ospfd.conf
+        regexp: '^ip ospf cost'
+        line: '!ip ospf cost 100'
+
+
+    - name: restart ospfd
+      systemd:
+        state: restarted
+        name: ospfd
+
+...

@@ -1,0 +1,30 @@
+---
+
+- name: Install quagga
+  yum: 
+    name:
+      - quagga
+      - nano
+      - tcpdump
+      - mtr
+      - traceroute
+    state: latest
+
+- name: Copy config files to routers
+  copy: src={{ item.src  }} dest={{ item.dest  }}
+  with_items:
+    - { src: 'files/{{ ansible_hostname }}/zebra.conf', dest: '/etc/quagga/zebra.conf'}
+    - { src: 'files/{{ ansible_hostname }}/ospfd.conf', dest: '/etc/quagga/ospfd.conf'}
+  notify:
+    - start quagga
+
+- name: Change sysctl set
+  sysctl: 
+    name: '{{ item.key }}'
+    value: '{{ item.value }}'
+    sysctl_set: yes
+    state: present
+    reload: yes
+  with_dict: '{{ sysctl_config  }}'
+
+...
