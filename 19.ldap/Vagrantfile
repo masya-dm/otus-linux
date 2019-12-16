@@ -1,0 +1,49 @@
+# -*- mode: ruby -*-
+# vim: set ft=ruby :
+
+MACHINES = {
+  :client => {
+        :box_name => "centos/7",
+        :ip_addr => '192.168.11.150'
+  },
+  :server => {
+        :box_name => "centos/7",
+        :ip_addr => '10.0.253.65'
+  }
+}
+
+Vagrant.configure("2") do |config|
+
+  MACHINES.each do |boxname, boxconfig|
+
+      config.vm.define boxname do |box|
+
+          box.vm.box = boxconfig[:box_name]
+          box.vm.host_name = boxname.to_s
+
+          box.vm.network "public_network", ip: boxconfig[:ip_addr]
+
+          box.vm.provider :virtualbox do |vb|
+            vb.customize ["modifyvm", :id, "--memory", "512"]
+          end
+          
+          box.vm.provision "shell", inline: <<-SHELL
+            mkdir -p ~root/.ssh; cp ~vagrant/.ssh/auth* ~root/.ssh
+            sed -i '65s/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+            systemctl restart sshd.service
+          SHELL
+
+        case boxname.to_s
+        when "server"
+        box.vm.provision "shell", run: "always", inline: <<-SHELL
+    	    echo "DEFROUTE=no" >> /etc/sysconfig/network-scripts/ifcfg-eth0
+    	    echo "DNS1=10.0.0.117" >> /etc/sysconfig/network-scripts/ifcfg-eth0
+            systemctl restart network    	    
+            ip a del 10.0.253.65/24 dev eth1
+            ip a add 10.0.253.65/16 dev eth1
+            ip r add 0.0.0.0/0 via 10.0.0.200
+          SHELL
+	end
+      end
+  end
+end

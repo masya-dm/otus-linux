@@ -1,0 +1,18 @@
+- hosts: all
+  become: yes
+  tasks: 
+    - name: change tap on tun
+      lineinfile:
+        path: /etc/openvpn/{{ ansible_hostname }}.conf
+        regexp: 'dev tap'
+        line: 'dev tun'
+
+    - name: restart ovpn
+      systemd:
+        name: '{{ item }}'
+        enabled: yes
+        masked: no
+        state: restarted
+      with_items:
+        - 'openvpn@{{ ansible_hostname }}'
+

@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Configure vlan 100 hosts
+      shell: /vagrant/vlan100.sh
+      when: "'1' in ansible_hostname"
+    
+    - name: Configure vlan 101 hosts
+      shell: /vagrant/vlan101.sh
+      when: "'2' in ansible_hostname"
+...

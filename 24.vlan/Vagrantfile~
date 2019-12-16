@@ -1,0 +1,119 @@
+# -*- mode: ruby -*-
+# vim: set ft=ruby :
+# -*- mode: ruby -*-
+# vim: set ft=ruby :
+
+
+
+MACHINES = {
+    :test1Client => {
+        :box_name => "centos/7",
+        :net => [
+                   {ip: '', adapter: 2, auto_config: false, virtualbox__intnet: "test1"},
+                ]
+  },
+    :test1Server => {
+        :box_name => "centos/7",
+        :net => [
+                   {adapter: 2, auto_config: false, virtualbox__intnet: "test1"},
+                ]
+                
+  },
+  
+    :test2Client => {
+        :box_name => "centos/7",
+        :net => [
+                   {adapter: 2, auto_config: false, virtualbox__intnet: "test2"},
+                ]
+  },
+    :test2Server => {
+        :box_name => "centos/7",
+        :net => [
+                   {adapter: 2, auto_config: false, virtualbox__intnet: "test2"},
+                ]
+                
+  },
+
+    :Virtualswitch => {
+        :box_name => "centos/7",
+        :net => [
+                   {adapter: 2, auto_config: false, virtualbox__intnet: "test1"},
+                   {adapter: 3, auto_config: false, virtualbox__intnet: "test2"},
+                   {adapter: 4, auto_config: false, virtualbox__intnet: "test-central"},
+                ]
+                
+  },
+  
+    :centralRouter => {
+        :box_name => "centos/7",
+        :net => [
+                   {adapter: 2, auto_config: false, virtualbox__intnet: "test-central"},
+                   {adapter: 3, auto_config: false, virtualbox__intnet: "central"},
+                ]
+                
+  },
+}
+
+Vagrant.configure("2") do |config|
+
+  MACHINES.each do |boxname, boxconfig|
+
+    config.vm.define boxname do |box|
+
+        box.vm.box = boxconfig[:box_name]
+        box.vm.host_name = boxname.to_s
+
+        boxconfig[:net].each do |ipconf|
+          box.vm.network "private_network", ipconf
+        end
+	
+	box.vm.provider :virtualbox do |vb|
+            vb.customize ["modifyvm", :id, "--memory", "256"]
+	    vb.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"]
+          end
+        
+        if boxconfig.key?(:public)
+          box.vm.network "public_network", boxconfig[:public]
+          box.vm.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"]
+        end
+
+        box.vm.provision "shell", inline: <<-SHELL
+          mkdir -p ~root/.ssh
+                cp ~vagrant/.ssh/auth* ~root/.ssh
+          setenforce 0
+          systemctl start network.service
+	  yes | cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+	  yum install nano tcpdump net-tools -y
+	  iptables -F
+          iptables -X
+        SHELL
+
+#        case boxname.to_s
+#        when "test1client"
+#          box.vm.provision "shell", run: "always", inline: <<-SHELL
+#            setenforce 0
+#	    yes | cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+#	    yum install nano tcpdump net-tools -y
+#	    iptables -F
+#            iptables -X
+#            SHELL
+#	when "test1server"
+#          box.vm.provision "shell", run: "always", inline: <<-SHELL
+#            setenforce 0
+#            yes | cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+#	    yum install nano tcpdump net-tools -y
+#	    iptables -F
+#            iptables -X
+#            SHELL
+#	when "Virtualswitch"
+#          box.vm.provision "shell", run: "always", inline: <<-SHELL
+#            setenforce 0
+#            yes | cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+#	    yum install nano tcpdump net-tools -y
+#	    iptables -F
+#            iptables -X
+#            SHELL
+         end
+        end
+       end
+#      end

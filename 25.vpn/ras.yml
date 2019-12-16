@@ -1,0 +1,32 @@
+- hosts: server
+  become: yes
+  tasks:
+    - name: generate cert and key
+        - shell: genkey.sh
+
+    - name: add client route 
+        - shell: echo 'iroute 192.168.33.0 255.255.255.0' > /etc/openvpn/client/client
+
+    - name: copy conf
+      copy:
+        src: ras/server.conf
+        dest: /etc/openvpn/
+      notify:
+        - start ovpn
+      
+  handlers:
+    - name: start ovpn
+      systemd:
+        name: '{{ item }}'
+        enabled: yes
+        masked: no
+        state: restarted
+      with_items:
+        - 'openvpn@{{ ansible_hostname }}'
+
+
+- hosts: client
+  become: yes
+  tasks:
+    - name: generate cert and key
+

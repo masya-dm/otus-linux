@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Config VLAN100
+      copy:
+        src: '{{ item }}'
+        dest: /etc/sysconfig/network-scripts/
+      with_items:
+        - files/ifcfg-eth1
+        - files/{{ ansible_hostname }}/ifcfg-eth1.100
+      notify: 
+        - restart network
+      when: "'1' in ansible_hostname"
+ 
+  handlers:
+    - name: restart network
+      systemd:
+        name: '{{ item }}'
+        enabled: yes
+        masked: no
+        state: restarted
+      with_items:
+        - 'network.service'
+...

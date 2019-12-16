@@ -11,7 +11,7 @@
     state: latest
 
 - name: Copy config files to routers
-  copy: src={{ item.src  }} dest={{ item.dest  }}
+  copy: src={{ item.src }} dest={{ item.dest }}
   with_items:
     - { src: 'files/{{ ansible_hostname }}/zebra.conf', dest: '/etc/quagga/zebra.conf'}
     - { src: 'files/{{ ansible_hostname }}/ospfd.conf', dest: '/etc/quagga/ospfd.conf'}

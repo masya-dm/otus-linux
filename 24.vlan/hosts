@@ -1,0 +1,6 @@
+[routers]
+test1Client ansible_host=127.0.0.1 ansible_port=2222 ansible_private_key_file=.vagrant/machines/test1Client/virtualbox/private_key
+test1Server ansible_host=127.0.0.1 ansible_port=2200 ansible_private_key_file=.vagrant/machines/test1Server/virtualbox/private_key
+test2Client ansible_host=127.0.0.1 ansible_port=2201 ansible_private_key_file=.vagrant/machines/test2Client/virtualbox/private_key
+test2Server ansible_host=127.0.0.1 ansible_port=2202 ansible_private_key_file=.vagrant/machines/test2Server/virtualbox/private_key
+Virtualswitch ansible_host=127.0.0.1 ansible_port=2203 ansible_private_key_file=.vagrant/machines/Virtualswitch/virtualbox/private_key

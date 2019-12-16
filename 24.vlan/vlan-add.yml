@@ -1,0 +1,33 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  
+    - name: Remove NetworkManager at {{ ansible_hostname }}
+      yum:
+        name: NetworkManager
+        state: absent
+
+    - name: Config VLAN100
+      copy:
+        src: '{{ item }}'
+        dest: /etc/sysconfig/network-scripts/
+      with_items:
+        - files/{{ ansible_hostname }}/ifcfg-eth1.100
+        - files/ifcfg-eth1
+      when: "'1' in ansible_hostname"
+
+    - name: Config VLAN101
+      copy:
+        src: '{{ item }}'
+        dest: /etc/sysconfig/network-scripts/
+      with_items:
+        - files/{{ ansible_hostname }}/ifcfg-eth1.101
+        - files/ifcfg-eth1
+      when: "'2' in ansible_hostname"
+
+    - name: reboot host {{ ansible_hostname }}
+      reboot:
+        reboot_timeout: 120
+
+...
